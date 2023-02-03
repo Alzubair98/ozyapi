@@ -81,3 +81,21 @@
     flex-direction: column;
     justify-content: center;
 }
+
+/* third carousel */
+
+.s-thirdcarousel{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.s-th-video :nth-child(1){
+    width: 18rem !important;
+    height: 18rem;
+}
+.s-th-video{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

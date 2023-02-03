@@ -55,6 +55,37 @@ const Services = () => {
           </div>
         </Carousel>
       </div>
+      {/* third carousel */}
+      <div className="s-thirdcarousel">
+        <div className="s-text">
+          <hr className="s-firsthr" />
+          <span>LATEST VIDEOS FROM OUR YOUTUBE CHANNE</span>
+          <hr className="s-secondhr" />
+        </div>
+        <Carousel breakPoints={breakPoints}>
+          <div className="s-th-video">
+            <ReactPlayer url="https://www.youtube.com/watch?v=eBKcGAhkZUI" />
+          </div>
+
+          <div className="s-th-video">
+            <ReactPlayer url="https://www.youtube.com/watch?v=eBKcGAhkZUI" />
+          </div>
+          <div className="s-th-video">
+            <ReactPlayer url="https://www.youtube.com/watch?v=eBKcGAhkZUI" />
+          </div>
+          <div className="s-th-video">
+            <ReactPlayer url="https://www.youtube.com/watch?v=eBKcGAhkZUI" />
+          </div>
+        </Carousel>
+      </div>
+      {/* chose a location */}
+      <div className="s-fourth">
+        <div className="s-text">
+          <hr className="s-firsthr" />
+          <span>CHOOSE YOUR FAVORITE LOCATION IN TURKEY</span>
+          <hr className="s-secondhr" />
+        </div>
+      </div>
     </div>
   );
 };
