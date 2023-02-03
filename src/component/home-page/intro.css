@@ -1,0 +1,24 @@
+.intro{
+    position: relative;
+    height: 50rem;
+}
+
+.i-cont{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+}
+
+.i-bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.i-text{
+    margin-top:15rem ;
+    z-index: 1;
+}
+
