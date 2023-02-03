@@ -1,11 +1,15 @@
-.s-firstcursul{
+.services{
+    display: flex;
+    flex-direction: column;
     padding: 5rem 10rem;
+}
+
+.s-firstcursul .secondcarousel{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 1rem;
-    
 }
 
 .s-firstcursul img{
@@ -15,10 +19,6 @@
     border-radius: 19px;
 }
 
-.project-content{
-    background-color: black;
-    color: white;
-}
 
 .c-content{
     display: flex;
@@ -50,6 +50,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: bold;
 }
 
 .s-firsthr{
@@ -60,4 +61,23 @@
 .s-secondhr{
     width: 20rem;
     margin-left: 4rem 
+}
+
+/* second carousel  */
+
+.s-secondcarousel {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.s-video :nth-child(1){
+    border-radius: 100% !important;
+    width: 18rem !important;
+    height: 18rem;
+}
+.s-video{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

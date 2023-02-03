@@ -2,6 +2,8 @@ import React from "react";
 import "./services.css";
 import Carousel from "react-elastic-carousel";
 import carouseldata from "./FCarsouelData";
+import ReactPlayer from "react-player";
+
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
   { width: 550, itemsToShow: 2 },
@@ -28,6 +30,29 @@ const Services = () => {
               </div>
             );
           })}
+        </Carousel>
+      </div>
+      {/* second chapter */}
+      <div className="s-secondcarousel">
+        <div className="s-text">
+          <hr className="s-firsthr" />
+          <span>WATCH WHAT OUR CLIENTS SAY ABOUT US</span>
+          <hr className="s-secondhr" />
+        </div>
+
+        <Carousel breakPoints={breakPoints}>
+          <div className="s-video">
+            <ReactPlayer url="https://www.youtube.com/watch?v=eBKcGAhkZUI" />
+          </div>
+          <div className="s-video">
+            <ReactPlayer url="https://www.youtube.com/watch?v=eBKcGAhkZUI" />
+          </div>
+          <div className="s-video">
+            <ReactPlayer url="https://www.youtube.com/watch?v=eBKcGAhkZUI" />
+          </div>
+          <div className="s-video">
+            <ReactPlayer url="https://www.youtube.com/watch?v=eBKcGAhkZUI" />
+          </div>
         </Carousel>
       </div>
     </div>
