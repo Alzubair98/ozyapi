@@ -2,6 +2,8 @@ import Article from "./component/articles/article";
 import Navbar from "./component/navbar/navbar";
 import Intro from "./component/home-page/intro";
 import Services from "./component/services/services";
+import Blog from "./component/blog/blog";
+import Footer from "./component/footer/footer";
 import "./App.css";
 
 function App() {
@@ -11,6 +13,8 @@ function App() {
       <Intro />
       <Services />
       <Article />
+      <Blog />
+      <Footer />
     </div>
   );
 }

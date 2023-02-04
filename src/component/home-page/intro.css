@@ -1,7 +1,12 @@
 .intro{
     position: relative;
-    height: 50rem;
+    height: 40rem;
 }
+
+/* .n-navbar{
+    opacity: 1 !important;
+    
+} */
 
 .i-cont{
     display: flex;
