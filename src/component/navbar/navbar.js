@@ -28,7 +28,7 @@ const Navbar = () => {
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">
-                  Locations
+                  Prefrences
                 </a>
               </li>
               <li class="nav-item">
