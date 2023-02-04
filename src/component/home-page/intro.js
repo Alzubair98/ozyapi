@@ -5,6 +5,10 @@ import "./intro.css";
 
 const Intro = () => {
   const [selects, setSelects] = useState();
+
+  const printValue = (e) => {
+    console.log(e.target.value);
+  };
   return (
     <>
       <div className="intro">
@@ -16,7 +20,12 @@ const Intro = () => {
           <form>
             <div class="row g-3 ms-5">
               <div class="col-md-2">
-                <select class="form-control">
+                <select
+                  class="form-control"
+                  value={selects}
+                  onChange={printValue}
+                >
+                  {/* <option>Location</option> */}
                   <option>type 1</option>
                   <option>type 2</option>
                   <option>type 3</option>
