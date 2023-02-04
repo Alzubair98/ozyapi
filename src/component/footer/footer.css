@@ -1,3 +1,18 @@
 #sticky-footer {
     flex-shrink: none;
 }
+
+.f-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.facebook{
+    color: rgb(89, 128, 235);
+    background-color: aliceblue;
+    border-radius: 50%;
+    font-size: 2rem;
+}
