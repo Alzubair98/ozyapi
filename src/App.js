@@ -1,4 +1,4 @@
-import Article from "./component/home-page/article";
+import Article from "./component/articles/article";
 import Navbar from "./component/navbar/navbar";
 import Intro from "./component/home-page/intro";
 import Services from "./component/services/services";
@@ -10,7 +10,7 @@ function App() {
       <Navbar />
       <Intro />
       <Services />
-      {/* <Article /> */}
+      <Article />
     </div>
   );
 }

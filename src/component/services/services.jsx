@@ -79,7 +79,7 @@ const Services = () => {
         </Carousel>
       </div>
       {/* chose a location */}
-      <div className="s-fourth">
+      {/* <div className="s-fourth">
         <div className="s-text">
           <hr className="s-firsthr" />
           <span>CHOOSE YOUR FAVORITE LOCATION IN TURKEY</span>
@@ -119,7 +119,7 @@ const Services = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
