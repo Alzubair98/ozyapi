@@ -16,8 +16,15 @@
 .p-secondPart{
     display: flex;
     flex-direction: column;
-    background-color: red;
-    width: 10rem;
-    height: 30rem;
 }
+
+.card{
+    width: 50rem;
+} 
+
+.p-c-img{
+    height: 20rem;
+}
+
+
 
