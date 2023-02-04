@@ -13,7 +13,7 @@ const Intro = () => {
           </h1>
           <form>
             <div class="row g-3 ms-5">
-              <div class="col-2">
+              <div class="col-md-2">
                 <input
                   type="text"
                   class="form-control"
@@ -21,7 +21,7 @@ const Intro = () => {
                   aria-label="First name"
                 />
               </div>
-              <div class="col-2">
+              <div class="col-md-2">
                 <input
                   type="text"
                   class="form-control"
@@ -29,7 +29,7 @@ const Intro = () => {
                   aria-label="Last name"
                 />
               </div>
-              <div class="col-2">
+              <div class="col-md-2">
                 <input
                   type="text"
                   class="form-control"
@@ -37,7 +37,7 @@ const Intro = () => {
                   aria-label="Last name"
                 />
               </div>
-              <div class="col-2">
+              <div class="col-md-2">
                 <input
                   type="text"
                   class="form-control"
@@ -45,7 +45,7 @@ const Intro = () => {
                   aria-label="Last name"
                 />
               </div>
-              <div class="col-2">
+              <div class="col-md-2">
                 <input
                   type="text"
                   class="form-control"
