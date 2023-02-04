@@ -8,4 +8,7 @@
     padding-left: 40rem !important;
 } 
 
+.nav-link{
+    font-size: 1.5rem;
+}
 /* need for mobile to be responsive */
