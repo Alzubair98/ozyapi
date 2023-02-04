@@ -1,0 +1,23 @@
+.p-fullPage{
+    display: flex;
+    flex-direction: row;
+    padding: 0 2rem;
+    gap:2rem;
+}
+
+.p-firstPart{
+    display: flex;
+    flex-direction: column;
+    background-color: blue;
+    width: 10rem;
+    height: 30rem;
+}
+
+.p-secondPart{
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+    width: 10rem;
+    height: 30rem;
+}
+
