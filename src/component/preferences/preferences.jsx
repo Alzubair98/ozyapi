@@ -11,7 +11,8 @@ const Preferencess = () => {
         <div className="p-firstPart col-4">
           <h1>why</h1>
         </div>
-        <div className="p-secondPart col-md-8">
+
+        <div className="p-secondPart col-8">
           <div className="card mb-3">
             <div className="row g-0">
               <div className="col-md-6">
