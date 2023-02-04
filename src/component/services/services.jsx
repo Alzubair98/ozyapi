@@ -85,6 +85,40 @@ const Services = () => {
           <span>CHOOSE YOUR FAVORITE LOCATION IN TURKEY</span>
           <hr className="s-secondhr" />
         </div>
+        <div className="s-locations-cont">
+          <div className="row">
+            <div className="col-8 s-image-hodler">
+              <img src="/img1.jpg" alt="image" className="img-grid-test" />
+              <h1>text</h1>
+            </div>
+            <div className="col-4 ps-0 s-image-hodler">
+              <img src="/img1.jpg" alt="image" className="img-grid-test2" />
+              <h1>text</h1>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-4 s-image-hodler">
+              <img src="/img1.jpg" alt="image" className="img-grid-test" />
+              <h1>text</h1>
+            </div>
+            <div className="col-8 ps-2 s-image-hodler">
+              <img src="/img1.jpg" alt="image" className="img-grid-test2" />
+              <h1>text</h1>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-6 s-image-hodler">
+              <a href="www.google.com">
+                <img src="/img1.jpg" alt="image" className="img-grid-test" />
+                <h1>text</h1>
+              </a>
+            </div>
+            <div className="col-6 ps-1 s-image-hodler">
+              <img src="/img1.jpg" alt="image" className="img-grid-test2" />
+              <h1>text</h1>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
