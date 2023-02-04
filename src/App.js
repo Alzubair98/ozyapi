@@ -1,20 +1,13 @@
-import Article from "./component/articles/article";
-import Navbar from "./component/navbar/navbar";
-import Intro from "./component/home-page/intro";
-import Services from "./component/services/services";
-import Blog from "./component/blog/blog";
-import Footer from "./component/footer/footer";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import Main from "./component/main/main";
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Intro />
-      <Services />
-      <Article />
-      <Blog />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Main />} />
+      </Routes>
     </div>
   );
 }
