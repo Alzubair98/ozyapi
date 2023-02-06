@@ -5,7 +5,7 @@ import Preferencess from "./component/preferences/preferences";
 import Home from "./component/Home/Home";
 import Dashboard from "./component/dashboard/Dashboard";
 import axios from "axios";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 function App() {
   const [user, setUser] = useState({
@@ -15,8 +15,9 @@ function App() {
 
   const checkLoginStatus = () => {
     axios
-      .get("http://127.0.0.1:3001/logged_in", { withCredentials: true })
+      .get("http://localhost:3001/logged_in", { withCredentials: true })
       .then((response) => {
+        console.log("logg in res", response);
         if (
           response.data.logged_in &&
           user.loggedInStatus === "NOT_LOGGED_IN"
