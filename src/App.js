@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
 import "./App.css";
 import Main from "./component/main/main";
 import Preferencess from "./component/preferences/preferences";
@@ -6,10 +6,12 @@ import Preferencess from "./component/preferences/preferences";
 function App() {
   return (
     <div className="App">
-      <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/preferencess" element={<Preferencess />} />
-      </Routes>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/preferencess" element={<Preferencess />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
