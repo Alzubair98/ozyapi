@@ -13,15 +13,17 @@ const Rigstration = (props) => {
   const navigate = useNavigate();
 
   const handleChange = (event) => {
-    setUser({
-      [event.target.name]: event.target.value,
-    });
+    const { name, value } = event.target;
+    setUser((prevValue) => ({
+      ...prevValue,
+      [name]: value,
+    }));
   };
 
   const handleSubmit = (event) => {
     axios
       .post(
-        "https://bikee.onrender.com/registrations",
+        "http://127.0.0.1:3001/registrations",
         {
           user: {
             email: user.email,
@@ -32,11 +34,10 @@ const Rigstration = (props) => {
         { withCredentials: true }
       )
       .then((response) => {
-        if (response.data.status === "created") {
-          props.handleSuccessfulAuth(response.data);
-          navigate("/");
-          console.log(response);
-        }
+        // if (response.data.status === "created") {
+        //   props.handleSuccessfulAuth(response.data);
+        //   navigate("/");
+        console.log(response);
       })
       .catch((error) => {
         console.log("registration error", error);
