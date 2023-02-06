@@ -5,7 +5,7 @@ import Preferencess from "./component/preferences/preferences";
 import Home from "./component/Home/Home";
 import Dashboard from "./component/dashboard/Dashboard";
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
   const [user, setUser] = useState({
@@ -66,9 +66,13 @@ function App() {
           <Route path="/preferencess" element={<Preferencess />} />
           <Route
             path="/home"
-            handleLogin={handleLogin}
-            handleLogout={handleLogout}
-            element={<Home />}
+            element={
+              <Home
+                handleLogin={handleLogin}
+                user={user.loggedInStatus}
+                handleLogout={handleLogout}
+              />
+            }
           />
           <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
