@@ -34,8 +34,8 @@ const Navbar = () => {
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    My Favorites
+                  <a class="nav-link" href="/Dashboard">
+                    dashboard
                   </a>
                 </li>
                 <li class="nav-item">
