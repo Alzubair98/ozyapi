@@ -34,10 +34,11 @@ const Rigstration = (props) => {
         { withCredentials: true }
       )
       .then((response) => {
-        // if (response.data.status === "created") {
-        //   props.handleSuccessfulAuth(response.data);
-        //   navigate("/");
-        console.log(response);
+        if (response.data.status === "created") {
+          props.handleSuccessfulAuth(response.data);
+          navigate("/");
+          console.log(response);
+        }
       })
       .catch((error) => {
         console.log("registration error", error);

@@ -1,7 +1,7 @@
 import React from "react";
 import Rigstration from "../auth/Registration";
 
-const Home = () => {
+const Home = (props) => {
   return (
     <>
       <h1> HOME</h1>
