@@ -16,13 +16,13 @@ function App() {
   const checkLoginStatus = () => {
     let data = JSON.parse(sessionStorage.getItem("user_id"));
 
-    if (data.logged_in && user.loggedInStatus === "NOT_LOGGED_IN") {
+    if (data && user.loggedInStatus === "NOT_LOGGED_IN") {
       setUser({
         loggedInStatus: "LOGGED_IN",
         user: data.user,
       });
       console.log("session storage", data);
-    } else if (!data.logged_in && user.loggedInStatus === "LOGGED_IN") {
+    } else if (!data && user.loggedInStatus === "LOGGED_IN") {
       setUser({
         loggedInStatus: "NOT_LOGGED_IN",
         user: {},
@@ -54,7 +54,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Main />} />
+          <Route path="/" element={<Main user={user} />} />
           <Route path="/preferencess" element={<Preferencess />} />
           <Route
             path="/home"

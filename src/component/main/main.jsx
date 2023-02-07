@@ -6,10 +6,10 @@ import Blog from "../blog/blog";
 import Footer from "../footer/footer";
 import Services from "../services/services";
 
-const Main = () => {
+const Main = (props) => {
   return (
     <>
-      <Navbar />
+      <Navbar user={props.user} />
       <Intro />
       <Services />
       <Article />

@@ -1,7 +1,7 @@
 import React from "react";
 import "./navbar.css";
 
-const Navbar = () => {
+const Navbar = (props) => {
   return (
     <>
       <div className="container">
@@ -37,11 +37,13 @@ const Navbar = () => {
                     Prefrences
                   </a>
                 </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="/Dashboard">
-                    dashboard
-                  </a>
-                </li>
+                {props.user.user.email === "zubairsk53@gmail.com" && (
+                  <li className="nav-item">
+                    <a className="nav-link" href="/Dashboard">
+                      dashboard
+                    </a>
+                  </li>
+                )}
                 <li className="nav-item">
                   <a className="nav-link" href="#">
                     Blog
