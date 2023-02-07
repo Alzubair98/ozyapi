@@ -5,13 +5,13 @@ const Navbar = () => {
   return (
     <>
       <div className="container">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark n-navbar">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark n-navbar">
+          <div className="container-fluid">
+            <a className="navbar-brand" href="#">
               LOGO
             </a>
             <button
-              class="navbar-toggler"
+              className="navbar-toggler"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#navbarNav"
@@ -19,42 +19,46 @@ const Navbar = () => {
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <span class="navbar-toggler-icon"></span>
+              <span className="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link n-padding" aria-current="page" href="#">
+            <div className="collapse navbar-collapse" id="navbarNav">
+              <ul className="navbar-nav">
+                <li className="nav-item">
+                  <a
+                    className="nav-link n-padding"
+                    aria-current="page"
+                    href="#"
+                  >
                     Home
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/preferencess">
+                <li className="nav-item">
+                  <a className="nav-link" href="/preferencess">
                     Prefrences
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/Dashboard">
+                <li className="nav-item">
+                  <a className="nav-link" href="/Dashboard">
                     dashboard
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
+                <li className="nav-item">
+                  <a className="nav-link" href="#">
                     Blog
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
+                <li className="nav-item">
+                  <a className="nav-link" href="#">
                     About
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
+                <li className="nav-item">
+                  <a className="nav-link" href="#">
                     Contact
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/home">
+                <li className="nav-item">
+                  <a className="nav-link" href="/home">
                     Sing in/ Sign up
                   </a>
                 </li>
