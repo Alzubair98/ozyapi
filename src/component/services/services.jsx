@@ -24,7 +24,7 @@ const Services = () => {
         <Carousel breakPoints={breakPoints}>
           {carouseldata.map((item) => {
             return (
-              <div className="c-content">
+              <div key={item.key} className="c-content">
                 <img src={item.image} alt="image" className="c-image" />
                 <p>{item.description}</p>
               </div>
