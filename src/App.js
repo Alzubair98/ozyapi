@@ -39,6 +39,8 @@ function App() {
       loggedInStatus: "NOT_LOGGED_IN",
       user: {},
     });
+
+    sessionStorage.clear();
   };
 
   const handleLogin = (data) => {

@@ -13,6 +13,7 @@ const Home = (props) => {
       <h1> test {props.user}</h1>
       <Rigstration handleSuccessfulAuth={handleSuccessfulAuth} />
       <Login handleSuccessfulAuth={handleSuccessfulAuth} />
+      <button onClick={() => props.handleLogout()}>logout</button>
     </>
   );
 };
