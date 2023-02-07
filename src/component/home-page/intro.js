@@ -18,10 +18,10 @@ const Intro = () => {
             PROPERTIES IN TURKEY BUT ONLY THE GOOD ONES
           </h1>
           <form>
-            <div class="row g-3 ms-5">
-              <div class="col-md-2">
+            <div className="row g-3 ms-5">
+              <div className="col-md-2">
                 <select
-                  class="form-control"
+                  className="form-control"
                   value={selects}
                   onChange={printValue}
                 >
@@ -32,60 +32,60 @@ const Intro = () => {
                 </select>
                 {/* <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   placeholder="Location"
                   aria-label="First name"
                 /> */}
               </div>
-              <div class="col-md-2">
-                <select class="form-control">
+              <div className="col-md-2">
+                <select className="form-control">
                   <option>type 1</option>
                   <option>type 2</option>
                   <option>type 3</option>
                 </select>
                 {/* <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   placeholder="Type"
                   aria-label="Last name"
                 /> */}
               </div>
-              <div class="col-md-2">
-                <select class="form-control">
+              <div className="col-md-2">
+                <select className="form-control">
                   <option>1+1 room</option>
                   <option>2+1 room</option>
                   <option>3+1 room</option>
                 </select>
                 {/* <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   placeholder="Rooms"
                   aria-label="Last name"
                 /> */}
               </div>
-              <div class="col-md-2">
-                <select class="form-control">
+              <div className="col-md-2">
+                <select className="form-control">
                   <option>1+1 room</option>
                   <option>2+1 room</option>
                   <option>3+1 room</option>
                 </select>
                 {/* <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   placeholder="Price Range"
                   aria-label="Last name"
                 /> */}
               </div>
-              <div class="col-md-2">
+              <div className="col-md-2">
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   placeholder="or Ref number"
                   aria-label="Last name"
                 />
               </div>
-              <div class="col-auto">
-                <button type="submit" class="btn btn-primary">
+              <div className="col-auto">
+                <button type="submit" className="btn btn-primary">
                   Search
                 </button>
               </div>

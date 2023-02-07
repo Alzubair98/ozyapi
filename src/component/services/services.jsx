@@ -42,16 +42,16 @@ const Services = () => {
 
         <Carousel breakPoints={breakPoints}>
           <div className="s-video">
-            <ReactPlayer url="https://www.youtube.com/watch?v=eBKcGAhkZUI" />
+            <ReactPlayer url="" />
           </div>
           <div className="s-video">
-            <ReactPlayer url="https://www.youtube.com/watch?v=eBKcGAhkZUI" />
+            <ReactPlayer url="" />
           </div>
           <div className="s-video">
-            <ReactPlayer url="https://www.youtube.com/watch?v=eBKcGAhkZUI" />
+            <ReactPlayer url="" />
           </div>
           <div className="s-video">
-            <ReactPlayer url="https://www.youtube.com/watch?v=eBKcGAhkZUI" />
+            <ReactPlayer url="" />
           </div>
         </Carousel>
       </div>
@@ -64,17 +64,17 @@ const Services = () => {
         </div>
         <Carousel breakPoints={breakPoints}>
           <div className="s-th-video">
-            <ReactPlayer url="https://www.youtube.com/watch?v=eBKcGAhkZUI" />
+            <ReactPlayer url="" />
           </div>
 
           <div className="s-th-video">
-            <ReactPlayer url="https://www.youtube.com/watch?v=eBKcGAhkZUI" />
+            <ReactPlayer url="" />
           </div>
           <div className="s-th-video">
-            <ReactPlayer url="https://www.youtube.com/watch?v=eBKcGAhkZUI" />
+            <ReactPlayer url="" />
           </div>
           <div className="s-th-video">
-            <ReactPlayer url="https://www.youtube.com/watch?v=eBKcGAhkZUI" />
+            <ReactPlayer url="" />
           </div>
         </Carousel>
       </div>

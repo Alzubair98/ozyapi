@@ -14,31 +14,20 @@ function App() {
   });
 
   const checkLoginStatus = () => {
-    axios
-      .get("http://localhost:3001/logged_in", { withCredentials: true })
-      .then((response) => {
-        console.log("logg in res", response);
-        if (
-          response.data.logged_in &&
-          user.loggedInStatus === "NOT_LOGGED_IN"
-        ) {
-          setUser({
-            loggedInStatus: "LOGGED_IN",
-            user: response.data.user,
-          });
-        } else if (
-          !response.data.logged_in &&
-          user.loggedInStatus === "LOGGED_IN"
-        ) {
-          setUser({
-            loggedInStatus: "NOT_LOGGED_IN",
-            user: {},
-          });
-        }
-      })
-      .catch((error) => {
-        console.log("check log in error", error);
+    let data = JSON.parse(sessionStorage.getItem("user_id"));
+
+    if (data.logged_in && user.loggedInStatus === "NOT_LOGGED_IN") {
+      setUser({
+        loggedInStatus: "LOGGED_IN",
+        user: data.user,
       });
+      console.log("session storage", data);
+    } else if (!data.logged_in && user.loggedInStatus === "LOGGED_IN") {
+      setUser({
+        loggedInStatus: "NOT_LOGGED_IN",
+        user: {},
+      });
+    }
   };
 
   useEffect(() => {
@@ -57,6 +46,8 @@ function App() {
       loggedInStatus: "LOGGED_IN",
       user: data.user,
     });
+
+    sessionStorage.setItem("user_id", JSON.stringify(data));
   };
 
   return (
