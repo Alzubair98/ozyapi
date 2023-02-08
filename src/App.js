@@ -4,7 +4,6 @@ import Main from "./component/main/main";
 import Preferencess from "./component/preferences/preferences";
 import Home from "./component/Home/Home";
 import Dashboard from "./component/dashboard/Dashboard";
-import axios from "axios";
 import React, { useState, useEffect } from "react";
 
 function App() {
