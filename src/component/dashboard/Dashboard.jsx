@@ -31,6 +31,12 @@ function Dashboard() {
       });
   };
 
+  const getItems = () => {
+    axios
+      .get("http://127.0.0.1:3001/houses")
+      .then((response) => console.log(response.data));
+  };
+
   return (
     <div>
       <form onSubmit={(e) => handleChange(e)}>
@@ -47,6 +53,10 @@ function Dashboard() {
         <br />
 
         <button type="submit"> save house</button>
+        <button type="button" onClick={getItems}>
+          {" "}
+          show
+        </button>
       </form>
     </div>
   );
