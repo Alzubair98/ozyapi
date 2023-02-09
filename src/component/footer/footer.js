@@ -31,27 +31,35 @@ const Footer = () => {
                 </div>
                 <ul className="social-list">
                   <li>
-                    <a href="#" className="icon icon-facebook"></a>
+                    <a href="#" className="icon icon-facebook">
+                      <BsFacebook />
+                    </a>
                   </li>
 
                   <li>
-                    <a href="#" className="icon icon-twitter"></a>
+                    <a href="#" className="icon icon-twitter">
+                      <BsFacebook />
+                    </a>
                   </li>
                   <li>
-                    <a href="#" className="icon icon-instagram"></a>
+                    <a href="#" className="icon icon-instagram">
+                      <BsFacebook />
+                    </a>
                   </li>
                   <li>
-                    <a href="#" className="icon icon-youtube"></a>
+                    <a href="#" className="icon icon-youtube">
+                      <BsFacebook />
+                    </a>
                   </li>
                 </ul>
               </div>
             </div>
-            <div className="col-lg col-xl footer-hiden">
+            {/* <div className="col-lg col-xl footer-hiden">
               <div className="footer-block collapsed-mobile"></div>
-            </div>
-            <div className="col-lg col-xl footer-hiden">
+            </div> */}
+            {/* <div className="col-lg col-xl footer-hiden">
               <div className="footer-block collapsed-mobile"></div>
-            </div>
+            </div> */}
             <div className="col-lg col-xl">
               <div className="footer-block collapsed-mobile">
                 <div className="title">
@@ -85,9 +93,6 @@ const Footer = () => {
                 <div className="collapsed-content">
                   <ul>
                     <li>
-                      <a href="account-details.html">LOCATIONS</a>
-                    </li>
-                    <li>
                       <a href="cart.html">MY FAVORITES</a>
                     </li>
                     <li>
@@ -95,9 +100,6 @@ const Footer = () => {
                     </li>
                     <li>
                       <a href="account-history.html">BLOG</a>
-                    </li>
-                    <li>
-                      <a href="account-history.html">RECENTLY SOLD</a>
                     </li>
                   </ul>
                 </div>

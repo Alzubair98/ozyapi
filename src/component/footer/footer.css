@@ -16,3 +16,23 @@
     border-radius: 50%;
     font-size: 2rem;
 }
+
+.collapsed-content ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+.collapsed-content ul li a:hover{
+    color: red;
+}
+
+.social-list{
+    list-style: none;
+    display: flex;
+    gap: 5px;
+    margin-left: -10px;
+}
+
+.footer-top{
+    padding-top: 10px;
+}
