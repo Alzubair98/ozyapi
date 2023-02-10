@@ -1,18 +1,16 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
-import { AppContext } from "../../App";
 
 import "./Dashboard.css";
 
 function Dashboard() {
-  const { image, setImage } = useContext(AppContext);
-
   const handleChange = (event) => {
     event.preventDefault();
     const data = new FormData();
 
     data.append("house[house_type]", event.target.house_type.value);
     data.append("house[image]", event.target.house_image.files[0]);
+    data.append("house[images]", event.target.house_images.all);
     handleSubmit(data);
   };
 
@@ -51,8 +49,11 @@ function Dashboard() {
         <label htmlFor="house type">image</label>
         <input type="file" name="house_image" required />
         <br />
-
-        <button type="submit"> save house</button>
+        <label htmlFor="house type">images</label>
+        <input type="file" multiple name="house_images" required />
+        <br />
+        <button type="submit">save house</button>
+        <br />
         <button type="button" onClick={getItems}>
           {" "}
           show

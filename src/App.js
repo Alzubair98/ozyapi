@@ -4,9 +4,7 @@ import Main from "./component/main/main";
 import Preferencess from "./component/preferences/preferences";
 import Home from "./component/Home/Home";
 import Dashboard from "./component/dashboard/Dashboard";
-import React, { useState, useEffect, createContext } from "react";
-
-export const AppContext = createContext(null);
+import React, { useState, useEffect } from "react";
 
 function App() {
   const [user, setUser] = useState({
@@ -54,30 +52,27 @@ function App() {
   };
 
   // for image
-  const [image, setImage] = useState(AppContext);
 
   return (
-    <AppContext.Provider value={{ image, setImage }}>
-      <div className="App">
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Main user={user} />} />
-            <Route path="/preferencess" element={<Preferencess />} />
-            <Route
-              path="/home"
-              element={
-                <Home
-                  handleLogin={handleLogin}
-                  user={user.loggedInStatus}
-                  handleLogout={handleLogout}
-                />
-              }
-            />
-            <Route path="/dashboard" element={<Dashboard />} />
-          </Routes>
-        </BrowserRouter>
-      </div>
-    </AppContext.Provider>
+    <div className="App">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Main user={user} />} />
+          <Route path="/preferencess" element={<Preferencess />} />
+          <Route
+            path="/home"
+            element={
+              <Home
+                handleLogin={handleLogin}
+                user={user.loggedInStatus}
+                handleLogout={handleLogout}
+              />
+            }
+          />
+          <Route path="/dashboard" element={<Dashboard />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 
