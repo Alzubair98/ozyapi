@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import axios from "axios";
 
 import "./Dashboard.css";
@@ -7,12 +7,12 @@ function Dashboard() {
   const handleChange = (event) => {
     event.preventDefault();
     const data = new FormData();
-    const files = event.target.house_images.files.length;
+    const files = event.target.images.files.length;
 
     data.append("house[house_type]", event.target.house_type.value);
     // data.append("house[image]", event.target.house_image.files[0]); # upload one image
     for (let i = 0; i < files; i++) {
-      data.append("house[images]", event.target.house_images.files[i]);
+      data.append("house[images][]", event.target.images.files[i]);
     }
     handleSubmit(data);
   };
@@ -57,7 +57,7 @@ function Dashboard() {
         <input type="file" name="house_image" required /> */}
         <br />
         <label htmlFor="house type">images</label>
-        <input type="file" multiple name="house_images" required />
+        <input type="file" multiple name="images" required />
         <br />
         <button type="submit">save house</button>
         <br />
