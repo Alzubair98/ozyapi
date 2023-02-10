@@ -7,20 +7,27 @@ function Dashboard() {
   const handleChange = (event) => {
     event.preventDefault();
     const data = new FormData();
+    const files = event.target.house_images.files.length;
 
     data.append("house[house_type]", event.target.house_type.value);
-    data.append("house[image]", event.target.house_image.files[0]);
-    data.append("house[images]", event.target.house_images.all);
+    // data.append("house[image]", event.target.house_image.files[0]); # upload one image
+    for (let i = 0; i < files; i++) {
+      data.append("house[images]", event.target.house_images.files[i]);
+    }
     handleSubmit(data);
   };
 
   const handleSubmit = (data) => {
     axios
-      .post("http://127.0.0.1:3001/houses", data, { withCredentials: true })
+      .post(
+        "http://127.0.0.1:3001/houses",
+        data,
+        { withCredentials: true },
+        { headers: { "Content-type": "multipart/form-data" } }
+      )
       .then((response) => {
         if (response) {
           console.log("house status", response);
-
           // setImage(data.image_url)
         }
       })
@@ -45,9 +52,9 @@ function Dashboard() {
           placeholder="house type"
           required
         />
-        <br />
+        {/* <br />
         <label htmlFor="house type">image</label>
-        <input type="file" name="house_image" required />
+        <input type="file" name="house_image" required /> */}
         <br />
         <label htmlFor="house type">images</label>
         <input type="file" multiple name="house_images" required />
