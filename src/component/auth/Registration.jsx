@@ -5,6 +5,7 @@ import axios from "axios";
 const Rigstration = (props) => {
   const [user, setUser] = useState({
     email: "",
+    number: "",
     password: "",
     password_confirmation: "",
     registrationsErrors: "",
@@ -27,6 +28,7 @@ const Rigstration = (props) => {
         {
           user: {
             email: user.email,
+            number: user.number,
             password: user.password,
             password_confirmation: user.password_confirmation,
           },
@@ -54,6 +56,14 @@ const Rigstration = (props) => {
           name="email"
           placeholder="Email"
           value={user.email}
+          onChange={handleChange}
+          required
+        />
+        <input
+          type="number"
+          name="number"
+          placeholder="Number"
+          value={user.number}
           onChange={handleChange}
           required
         />
