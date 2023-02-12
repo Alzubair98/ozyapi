@@ -37,9 +37,6 @@ const Home = (props) => {
           ) : (
             <Login handleSuccessfulAuth={handleSuccessfulAuth} />
           )}
-          {/* 
-
-        <button onClick={() => props.handleLogout()}>logout</button> */}
         </div>
       </div>
     </div>

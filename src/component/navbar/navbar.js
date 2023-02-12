@@ -59,11 +59,18 @@ const Navbar = (props) => {
                     Contact
                   </a>
                 </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="/home">
-                    Sing in/ Sign up
+                {Object.keys(props.user.user).length != 0 ? (
+                  <button
+                    className="btn btn-danger"
+                    onClick={() => props.handleLogout()}
+                  >
+                    logout
+                  </button>
+                ) : (
+                  <a href="/home">
+                    <button className="btn btn-success">Sign In</button>
                   </a>
-                </li>
+                )}
               </ul>
             </div>
           </div>

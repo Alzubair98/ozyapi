@@ -57,18 +57,14 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Navbar user={user} />
+        <Navbar user={user} handleLogout={handleLogout} />
         <Routes>
           <Route path="/" element={<Main user={user} />} />
           <Route path="/preferencess" element={<Preferencess />} />
           <Route
             path="/home"
             element={
-              <Home
-                handleLogin={handleLogin}
-                user={user.loggedInStatus}
-                handleLogout={handleLogout}
-              />
+              <Home handleLogin={handleLogin} user={user.loggedInStatus} />
             }
           />
           <Route path="/dashboard" element={<Dashboard />} />
