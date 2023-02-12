@@ -10,6 +10,15 @@ function Dashboard(props) {
     const files = event.target.images.files.length;
 
     data.append("house[house_type]", event.target.house_type.value);
+    data.append("house[real_price]", event.target.real_price.value);
+    data.append("house[location]", event.target.location.value);
+    data.append("house[owner_number]", event.target.owner_number.value);
+    data.append("house[age]", event.target.age.value);
+    data.append("house[size]", event.target.size.value);
+    data.append("house[rooms]", event.target.rooms.value);
+    data.append("house[bath_rooms]", event.target.bath_rooms.value);
+    data.append("house[price]", event.target.price.value);
+    data.append("house[ref_number]", event.target.ref_number.value);
     // data.append("house[image]", event.target.house_image.files[0]); # upload one image
     for (let i = 0; i < files; i++) {
       data.append("house[images][]", event.target.images.files[i]);
@@ -51,10 +60,92 @@ function Dashboard(props) {
           placeholder="house type"
           required
         />
+        <br />
+        <label htmlFor="house type">real price</label>
+        <input
+          className="mt-2"
+          type="number"
+          name="real_price"
+          placeholder="real price"
+          required
+        />
+        <br />
+        <label htmlFor="house type">price</label>
+        <input
+          className="mt-2"
+          type="number"
+          name="price"
+          placeholder="house type"
+          required
+        />
+        <br />
+        <label htmlFor="house type">location</label>
+        <input
+          className="mt-2"
+          type="text"
+          name="location"
+          placeholder="location"
+          required
+        />
+        <br />
+        <label htmlFor="house type">owner number</label>
+        <input
+          className="mt-2"
+          type="text"
+          name="owner_number"
+          placeholder="owner number"
+          required
+        />
+        <br />
+        <label htmlFor="house type">age</label>
+        <input
+          className="mt-2"
+          type="text"
+          name="age"
+          placeholder="age"
+          required
+        />
+        <br />
+        <label htmlFor="house type">size</label>
+        <input
+          className="mt-2"
+          type="text"
+          name="size"
+          placeholder="size"
+          required
+        />
+        <br />
+        <label htmlFor="house type">rooms</label>
+        <input
+          className="mt-2"
+          type="text"
+          name="rooms"
+          placeholder="rooms"
+          required
+        />
+        <br />
+        <label htmlFor="house type">bath rooms</label>
+        <input
+          className="mt-2"
+          type="text"
+          name="bath_rooms"
+          placeholder="bath rooms"
+          required
+        />
+        <br />
+
+        <label htmlFor="house type">ref number</label>
+        <input
+          className="mt-2"
+          type="number"
+          name="ref_number"
+          placeholder="ref number"
+          required
+        />
 
         <br />
         <label htmlFor="house type">images</label>
-        <input type="file" multiple name="images" required />
+        <input className="mt-2" type="file" multiple name="images" required />
         <br />
         <button type="submit">save house</button>
         <br />
