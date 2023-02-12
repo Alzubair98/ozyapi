@@ -9,7 +9,6 @@ import Services from "../services/services";
 const Main = (props) => {
   return (
     <>
-      <Navbar user={props.user} />
       <Intro />
       <Services />
       <Article />

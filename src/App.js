@@ -5,6 +5,7 @@ import Preferencess from "./component/preferences/preferences";
 import Home from "./component/Home/Home";
 import Dashboard from "./component/dashboard/Dashboard";
 import React, { useState, useEffect } from "react";
+import Navbar from "./component/navbar/navbar";
 
 function App() {
   const [user, setUser] = useState({
@@ -56,6 +57,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <Navbar user={user} />
         <Routes>
           <Route path="/" element={<Main user={user} />} />
           <Route path="/preferencess" element={<Preferencess />} />

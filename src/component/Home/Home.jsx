@@ -27,7 +27,7 @@ const Home = (props) => {
       <div className="Cont cfb">
         <div className={setBannerClass()}>
           {welcome ? <h2>Hello, New Friend!</h2> : <h2>Welcome Back</h2>}
-          <button onClick={() => setWelcome(!welcome)}>
+          <button className="h-button" onClick={() => setWelcome(!welcome)}>
             {welcome ? "Sign In" : "Create Account"}
           </button>
         </div>
@@ -37,7 +37,7 @@ const Home = (props) => {
           ) : (
             <Login handleSuccessfulAuth={handleSuccessfulAuth} />
           )}
-          {/* <h1> test {props.user}</h1>
+          {/* 
 
         <button onClick={() => props.handleLogout()}>logout</button> */}
         </div>
