@@ -4,8 +4,8 @@ import "./navbar.css";
 const Navbar = (props) => {
   return (
     <>
-      <div className="container">
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark n-navbar">
+      <div className="">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
           <div className="container-fluid">
             <a className="navbar-brand" href="#">
               LOGO
@@ -22,7 +22,7 @@ const Navbar = (props) => {
               <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
-              <ul className="navbar-nav">
+              <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li className="nav-item">
                   <a
                     className="nav-link n-padding"
