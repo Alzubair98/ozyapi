@@ -86,7 +86,10 @@ const Rigstration = (props) => {
           required
         />
 
-        <button type="submit"> Rigister</button>
+        <button className="h-button" type="submit">
+          {" "}
+          Rigister
+        </button>
       </form>
     </div>
   );

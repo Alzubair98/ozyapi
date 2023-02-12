@@ -66,7 +66,10 @@ const Login = (props) => {
           required
         />
 
-        <button type="submit"> Log in</button>
+        <button className="h-button" type="submit">
+          {" "}
+          Log in
+        </button>
       </form>
     </div>
   );
