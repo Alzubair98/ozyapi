@@ -3,7 +3,7 @@ import axios from "axios";
 
 import "./Dashboard.css";
 
-function Dashboard() {
+function Dashboard(props) {
   const handleChange = (event) => {
     event.preventDefault();
     const data = new FormData();

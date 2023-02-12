@@ -27,7 +27,7 @@ const Navbar = (props) => {
                   <a
                     className="nav-link n-padding"
                     aria-current="page"
-                    href="#"
+                    href="/"
                   >
                     Home
                   </a>
