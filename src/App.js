@@ -67,7 +67,7 @@ function App() {
               <Home handleLogin={handleLogin} user={user.loggedInStatus} />
             }
           />
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/dashboard" element={<Dashboard user={user} />} />
         </Routes>
       </BrowserRouter>
     </div>

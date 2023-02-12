@@ -53,6 +53,7 @@ const Login = (props) => {
           type="email"
           name="email"
           placeholder="Email"
+          className="form-control"
           value={user.email}
           onChange={handleChange}
           required
@@ -61,6 +62,7 @@ const Login = (props) => {
           type="password"
           name="password"
           placeholder="password"
+          className="form-control mt-2"
           value={user.password}
           onChange={handleChange}
           required

@@ -28,7 +28,6 @@ function Dashboard() {
       .then((response) => {
         if (response) {
           console.log("house status", response);
-          // setImage(data.image_url)
         }
       })
       .catch((error) => {
@@ -52,9 +51,7 @@ function Dashboard() {
           placeholder="house type"
           required
         />
-        {/* <br />
-        <label htmlFor="house type">image</label>
-        <input type="file" name="house_image" required /> */}
+
         <br />
         <label htmlFor="house type">images</label>
         <input type="file" multiple name="images" required />

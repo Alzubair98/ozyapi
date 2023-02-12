@@ -57,14 +57,17 @@ const Rigstration = (props) => {
           type="email"
           name="email"
           placeholder="Email"
+          className="form-control"
           value={user.email}
           onChange={handleChange}
           required
         />
         <input
-          type="number"
+          type="tel"
           name="number"
-          placeholder="Number"
+          placeholder="Phone Number"
+          className="form-control mt-2"
+          pattern="[+]{1}[0-9]{11,14}"
           value={user.number}
           onChange={handleChange}
           required
@@ -73,6 +76,7 @@ const Rigstration = (props) => {
           type="password"
           name="password"
           placeholder="password"
+          className="form-control mt-2"
           value={user.password}
           onChange={handleChange}
           required
@@ -81,6 +85,7 @@ const Rigstration = (props) => {
           type="password"
           name="password_confirmation"
           placeholder="password confirmation"
+          className="form-control mt-2"
           value={user.password_confirmation}
           onChange={handleChange}
           required
