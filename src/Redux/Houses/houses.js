@@ -6,7 +6,9 @@ const LOADING = "LOADING";
 const url = "http://localhost:3001/houses";
 
 export const loadHouses = createAsyncThunk(LOADING, async () => {
-  const response = await axios.get(url);
+  const response = await axios.get(url).catch((error) => {
+    console.log("Error", error);
+  });
   const res = response.data;
   const data = res.map((item) => ({
     id: item.id,
@@ -26,14 +28,13 @@ export const loadHouses = createAsyncThunk(LOADING, async () => {
 });
 
 export const storeSlice = createSlice({
-  name: "houses",
+  name: "Houses",
   initialState: [],
   reducers: {},
-  extraReducers: {
-    [loadHouses.fulfilled]: (state, action) => action.payload,
+  extraReducers: (builder) => {
+    builder.addCase(loadHouses.fulfilled, (state, action) => action.payload);
   },
 });
 
-const houseAction = storeSlice.actions;
-export { houseAction };
+export const dataAction = storeSlice.actions;
 export default storeSlice.reducer;

@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./preferencess.css";
-import Navbar from "../navbar/navbar";
+import { useSelector } from "react-redux";
+import { loadHouses } from "../../Redux/Houses/houses";
 import Carousel from "react-bootstrap/Carousel";
+import { useDispatch } from "react-redux";
 
 const Preferencess = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(loadHouses());
+  }, []);
+  const state = useSelector((state) => state.storeSlice);
   return (
     <>
-      {/* <Navbar /> */}
+      {console.log(state)}
       <div className="p-fullPage row">
         <div className="p-firstPart col-4">
           <h1>why</h1>
