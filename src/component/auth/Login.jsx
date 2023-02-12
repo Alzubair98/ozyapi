@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import "../Home/home.css";
 
 const Login = (props) => {
   const [user, setUser] = useState({
@@ -45,8 +46,9 @@ const Login = (props) => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className="form-comp cfb">
+      <h1>Sign In!</h1>
+      <form onSubmit={handleSubmit} className="sign-up-form cfb">
         <input
           type="email"
           name="email"
