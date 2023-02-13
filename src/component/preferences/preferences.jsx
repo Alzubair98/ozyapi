@@ -20,7 +20,12 @@ const Preferencess = () => {
         </div>
         <div className="p-secondPart col-8">
           {state.map((item) => (
-            <Card type={item.house_type} images={item.images_urls} />
+            <Card
+              id={item.id}
+              type={item.house_type}
+              images={item.images_urls}
+              desc={item.description}
+            />
           ))}
         </div>
       </div>

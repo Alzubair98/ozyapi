@@ -22,6 +22,7 @@ export const loadHouses = createAsyncThunk(LOADING, async () => {
     rooms: item.rooms,
     bath_rooms: item.bath_rooms,
     ref_number: item.ref_number,
+    description: item.description,
     images_urls: [item.images_urls],
   }));
   return data;
