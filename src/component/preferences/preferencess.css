@@ -31,5 +31,15 @@
     width: 25rem;
 }
 
+.c-room{
+    display: flex;
+}
+
+.c-room-image{
+    width: 5rem;
+    height: 2rem;
+    color: darkblue;
+}
+
 
 

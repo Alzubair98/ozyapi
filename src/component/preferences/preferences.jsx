@@ -25,6 +25,9 @@ const Preferencess = () => {
               type={item.house_type}
               images={item.images_urls}
               desc={item.description}
+              location={item.location}
+              rooms={item.rooms}
+              baths={item.bath_rooms}
             />
           ))}
         </div>

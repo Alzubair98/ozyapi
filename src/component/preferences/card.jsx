@@ -1,5 +1,8 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
+import { MdBedroomChild } from "react-icons/md";
+import { GiBathtub } from "react-icons/gi";
+import "./preferencess.css";
 
 const Card = (props) => {
   return (
@@ -24,9 +27,19 @@ const Card = (props) => {
           <div className="card-body">
             <h5 className="card-title">{props.type}</h5>
             <p className="card-text">{props.desc}</p>
+            <p className="card-text">{props.location}</p>
             <p className="card-text">
               <small className="text-muted">Last updated 3 mins ago</small>
             </p>
+          </div>
+          <div className="c-room">
+            <MdBedroomChild className="c-room-image" />
+            <p>{props.rooms}</p>
+          </div>
+
+          <div className="c-room">
+            <GiBathtub className="c-room-image" />
+            <p>{props.baths}</p>
           </div>
         </div>
       </div>
