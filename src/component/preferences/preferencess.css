@@ -20,11 +20,15 @@
 }
 
 .card{
-    width: 50rem;
+    width: 60rem;
 } 
 
 .p-c-img{
-    height: 20rem;
+    height: 18rem;
+}
+
+.c-c-img{
+    width: 25rem;
 }
 
 

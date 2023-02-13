@@ -5,8 +5,8 @@ const Card = (props) => {
   return (
     <div key={props.id} className="card mb-3">
       <div className="row g-0">
-        <div className="col-md-6">
-          <Carousel fade>
+        <div className="col-md-5">
+          <Carousel fade className="c-c-img">
             {props.images.map((image) =>
               image.map((single) => (
                 <Carousel.Item>
@@ -20,7 +20,7 @@ const Card = (props) => {
             )}
           </Carousel>
         </div>
-        <div className="col-md-6">
+        <div className="col-md-7">
           <div className="card-body">
             <h5 className="card-title">{props.type}</h5>
             <p className="card-text">{props.desc}</p>
