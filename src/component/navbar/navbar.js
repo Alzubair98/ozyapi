@@ -34,7 +34,7 @@ const Navbar = (props) => {
                 </li>
                 <li className="nav-item">
                   <a className="nav-link" href="/preferencess">
-                    Prefrences
+                    Properties
                   </a>
                 </li>
                 {props.user.user.email === "zubairsk53@gmail.com" && (
