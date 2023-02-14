@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import { loadHouses } from "../../Redux/Houses/houses";
 import { useDispatch } from "react-redux";
 
-const Preferencess = () => {
+const Preferencess = (props) => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(loadHouses());
@@ -28,6 +28,7 @@ const Preferencess = () => {
               location={item.location}
               rooms={item.rooms}
               baths={item.bath_rooms}
+              handelid={props.handelid}
             />
           ))}
         </div>

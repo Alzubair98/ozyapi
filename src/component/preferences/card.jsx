@@ -2,6 +2,7 @@ import React from "react";
 import Carousel from "react-bootstrap/Carousel";
 import { MdBedroomChild } from "react-icons/md";
 import { GiBathtub } from "react-icons/gi";
+import { NavLink } from "react-router-dom";
 import "./preferencess.css";
 
 const Card = (props) => {
@@ -41,6 +42,16 @@ const Card = (props) => {
             <GiBathtub className="c-room-image" />
             <p>{props.baths}</p>
           </div>
+
+          <button
+            className="btn btn-success"
+            type="button"
+            onClick={props.handelid}
+          >
+            <NavLink className="details-link" id={props.id} to="/details">
+              Details
+            </NavLink>
+          </button>
         </div>
       </div>
     </div>

@@ -6,6 +6,7 @@ import Home from "./component/Home/Home";
 import Dashboard from "./component/dashboard/Dashboard";
 import React, { useState, useEffect } from "react";
 import Navbar from "./component/navbar/navbar";
+import Details from "./component/preferences/details";
 
 function App() {
   const [user, setUser] = useState({
@@ -52,7 +53,12 @@ function App() {
     sessionStorage.setItem("user_id", JSON.stringify(data));
   };
 
-  // for image
+  const [id, setId] = useState(0);
+
+  const handelid = (e) => {
+    const button = e.target;
+    setId(Number(button.id));
+  };
 
   return (
     <div className="App">
@@ -60,7 +66,10 @@ function App() {
         <Navbar user={user} handleLogout={handleLogout} />
         <Routes>
           <Route path="/" element={<Main user={user} />} />
-          <Route path="/preferencess" element={<Preferencess />} />
+          <Route
+            path="/preferencess"
+            element={<Preferencess handelid={handelid} />}
+          />
           <Route
             path="/home"
             element={
@@ -68,6 +77,7 @@ function App() {
             }
           />
           <Route path="/dashboard" element={<Dashboard user={user} />} />
+          <Route path="/details" element={<Details buttonId={id} />} />
         </Routes>
       </BrowserRouter>
     </div>
