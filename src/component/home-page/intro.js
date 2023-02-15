@@ -1,14 +1,29 @@
 import React, { useState } from "react";
 import Turky from "../../images/turky.jpg";
-
+import axios from "axios";
 import "./intro.css";
 
 const Intro = () => {
-  const [selects, setSelects] = useState();
+  const [priceRange, setPriceRange] = useState("");
+  const [location, setLocation] = useState("");
+  const [rooms, setRooms] = useState("");
+  const [houseType, setHouseType] = useState("");
 
-  const printValue = (e) => {
-    console.log(e.target.value);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const response = await axios.get("http://localhost:3001/search", {
+      params: {
+        location: location,
+        rooms: rooms,
+        house_type: houseType,
+        price: priceRange,
+      },
+    });
+
+    console.log(response.data);
   };
+
   return (
     <>
       <div className="intro">
@@ -17,39 +32,61 @@ const Intro = () => {
           <h1 className="i-text">
             PROPERTIES IN TURKEY BUT ONLY THE GOOD ONES
           </h1>
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className="row g-3 ms-5">
               <div className="col-md-2">
                 <select
                   className="form-control"
-                  value={selects}
-                  onChange={printValue}
+                  id="location"
+                  name="location"
+                  onChange={(e) => setLocation(e.target.value)}
                 >
-                  {/* <option>Location</option> */}
-                  <option>type 1</option>
-                  <option>type 2</option>
-                  <option>type 3</option>
+                  <option>Location</option>
+                  <option value="istanbull">Istanbul</option>
+                  <option value="adana">adana</option>
+                  <option value="ankara">ankara</option>
                 </select>
               </div>
               <div className="col-md-2">
-                <select className="form-control">
-                  <option>type 1</option>
-                  <option>type 2</option>
-                  <option>type 3</option>
+                <select
+                  className="form-control"
+                  id="house-type"
+                  name="house-type"
+                  onChange={(e) => setHouseType(e.target.value)}
+                >
+                  <option value="">house Type</option>
+                  <option value="new house 3">new house 3</option>
+                  <option value="normal house">normal house</option>
+                  <option value="big house">big house</option>
                 </select>
               </div>
               <div className="col-md-2">
-                <select className="form-control">
-                  <option>1+1 room</option>
-                  <option>2+1 room</option>
-                  <option>3+1 room</option>
+                <select
+                  className="form-control"
+                  id="rooms"
+                  name="rooms"
+                  onChange={(e) => setRooms(e.target.value)}
+                >
+                  <option value="">Rooms</option>
+                  <option value="2">1+1 room</option>
+                  <option value="3">2+1 room</option>
+                  <option value="4">3+1 room</option>
+                  <option value="5">4+1 room</option>
                 </select>
               </div>
               <div className="col-md-2">
-                <select className="form-control">
-                  <option>1+1 room</option>
-                  <option>2+1 room</option>
-                  <option>3+1 room</option>
+                <select
+                  className="form-control"
+                  id="location"
+                  name="location"
+                  onChange={(e) => setPriceRange(e.target.value)}
+                >
+                  <option value="">Price Range</option>
+                  <option value="1000-2000">1000-2000</option>
+                  <option value="2000-3000">2000-3000</option>
+                  <option value="3000-4000">3000-4000</option>
+                  <option value="4000-5000">4000-5000</option>
+                  <option value="5000-6000">5000-6000</option>
                 </select>
               </div>
               <div className="col-md-2">
