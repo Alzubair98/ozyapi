@@ -30,12 +30,6 @@ const Intro = () => {
                   <option>type 2</option>
                   <option>type 3</option>
                 </select>
-                {/* <input
-                  type="text"
-                  className="form-control"
-                  placeholder="Location"
-                  aria-label="First name"
-                /> */}
               </div>
               <div className="col-md-2">
                 <select className="form-control">
@@ -43,12 +37,6 @@ const Intro = () => {
                   <option>type 2</option>
                   <option>type 3</option>
                 </select>
-                {/* <input
-                  type="text"
-                  className="form-control"
-                  placeholder="Type"
-                  aria-label="Last name"
-                /> */}
               </div>
               <div className="col-md-2">
                 <select className="form-control">
@@ -56,12 +44,6 @@ const Intro = () => {
                   <option>2+1 room</option>
                   <option>3+1 room</option>
                 </select>
-                {/* <input
-                  type="text"
-                  className="form-control"
-                  placeholder="Rooms"
-                  aria-label="Last name"
-                /> */}
               </div>
               <div className="col-md-2">
                 <select className="form-control">
@@ -69,12 +51,6 @@ const Intro = () => {
                   <option>2+1 room</option>
                   <option>3+1 room</option>
                 </select>
-                {/* <input
-                  type="text"
-                  className="form-control"
-                  placeholder="Price Range"
-                  aria-label="Last name"
-                /> */}
               </div>
               <div className="col-md-2">
                 <input
