@@ -8,6 +8,7 @@ const Intro = () => {
   const [location, setLocation] = useState("");
   const [rooms, setRooms] = useState("");
   const [houseType, setHouseType] = useState("");
+  const [refNumber, setRefNumber] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -18,6 +19,7 @@ const Intro = () => {
         rooms: rooms,
         house_type: houseType,
         price: priceRange,
+        ref_number: refNumber,
       },
     });
 
@@ -91,10 +93,13 @@ const Intro = () => {
               </div>
               <div className="col-md-2">
                 <input
+                  value={refNumber}
+                  name="ref_number"
                   type="text"
                   className="form-control"
                   placeholder="or Ref number"
                   aria-label="Last name"
+                  onChange={(e) => setRefNumber(e.target.value)}
                 />
               </div>
               <div className="col-auto">
