@@ -5,10 +5,10 @@ import Blog from "../blog/blog";
 import Footer from "../footer/footer";
 import Services from "../services/services";
 
-const Main = (props) => {
+const Main = () => {
   return (
     <>
-      <Intro handelSearch={props.handelSearch} />
+      <Intro />
       <Services />
       <Article />
       <Blog />

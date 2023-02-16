@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Turky from "../../images/turky.jpg";
 import axios from "axios";
 import "./intro.css";
-import { NavLink } from "react-router-dom";
 
 const Intro = (props) => {
   const [priceRange, setPriceRange] = useState("");
@@ -23,7 +22,7 @@ const Intro = (props) => {
         ref_number: refNumber,
       },
     });
-    props.handelSearch(response.data);
+    console.log(response.data);
   };
 
   return (
@@ -104,9 +103,7 @@ const Intro = (props) => {
               </div>
               <div className="col-auto">
                 <button type="submit" className="btn btn-primary">
-                  <NavLink to="/search" className="i-color">
-                    Search
-                  </NavLink>
+                  Search
                 </button>
               </div>
             </div>
