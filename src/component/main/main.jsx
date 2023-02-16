@@ -6,12 +6,9 @@ import Footer from "../footer/footer";
 import Services from "../services/services";
 
 const Main = (props) => {
-  const handleSuccessSearch = (data) => {
-    props.onSearch(data);
-  };
   return (
     <>
-      <Intro handleSuccessSearch={handleSuccessSearch} />
+      <Intro onSearch={props.onSearch} />
       <Services />
       <Article />
       <Blog />

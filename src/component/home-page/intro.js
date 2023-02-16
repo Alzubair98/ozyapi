@@ -27,7 +27,7 @@ const Intro = (props) => {
         },
       })
       .then((response) => {
-        props.handleSuccessSearch(response.data);
+        props.onSearch(response.data);
         navigate("/search");
       })
       .catch((error) => console.log("search", error));
