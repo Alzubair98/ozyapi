@@ -61,12 +61,21 @@ function App() {
     setId(Number(button.id));
   };
 
+  const [searchResults, setSearchResults] = useState([]);
+
+  const handleSearch = (data) => {
+    setSearchResults(data);
+  };
+
   return (
     <div className="App">
       <BrowserRouter>
         <Navbar user={user} handleLogout={handleLogout} />
         <Routes>
-          <Route path="/" element={<Main user={user} />} />
+          <Route
+            path="/"
+            element={<Main user={user} onSearch={handleSearch} />}
+          />
           <Route
             path="/preferencess"
             element={<Preferencess handelid={handelid} />}
@@ -79,7 +88,7 @@ function App() {
           />
           <Route path="/dashboard" element={<Dashboard user={user} />} />
           <Route path="/details" element={<Details buttonId={id} />} />
-          <Route path="/search" element={<Search />} />
+          <Route path="/search" element={<Search data={searchResults} />} />
         </Routes>
       </BrowserRouter>
     </div>

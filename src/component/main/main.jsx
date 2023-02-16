@@ -5,10 +5,13 @@ import Blog from "../blog/blog";
 import Footer from "../footer/footer";
 import Services from "../services/services";
 
-const Main = () => {
+const Main = (props) => {
+  const handleSuccessSearch = (data) => {
+    props.onSearch(data);
+  };
   return (
     <>
-      <Intro />
+      <Intro handleSuccessSearch={handleSuccessSearch} />
       <Services />
       <Article />
       <Blog />

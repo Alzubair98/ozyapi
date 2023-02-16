@@ -10,9 +10,9 @@ const Card = (props) => {
     <div key={props.id} className="card mb-3">
       <div className="row g-0">
         <div className="col-md-5">
-          <Carousel fade className="c-c-img">
+          {/* <Carousel fade className="c-c-img">
             {props.images.map((image) =>
-              image.map((single) => (
+              image.map((single, i) => (
                 <Carousel.Item>
                   <img
                     className="d-block w-100 p-c-img"
@@ -22,7 +22,7 @@ const Card = (props) => {
                 </Carousel.Item>
               ))
             )}
-          </Carousel>
+          </Carousel> */}
         </div>
         <div className="col-md-7">
           <div className="card-body">
