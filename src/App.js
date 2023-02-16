@@ -7,6 +7,7 @@ import Dashboard from "./component/dashboard/Dashboard";
 import React, { useState, useEffect } from "react";
 import Navbar from "./component/navbar/navbar";
 import Details from "./component/preferences/details";
+import Search from "./component/home-page/search";
 
 function App() {
   const [user, setUser] = useState({
@@ -60,12 +61,21 @@ function App() {
     setId(Number(button.id));
   };
 
+  const [searchData, setSearchData] = useState("data");
+
+  const handelSearch = (data) => {
+    setSearchData(data);
+  };
+
   return (
     <div className="App">
       <BrowserRouter>
         <Navbar user={user} handleLogout={handleLogout} />
         <Routes>
-          <Route path="/" element={<Main user={user} />} />
+          <Route
+            path="/"
+            element={<Main user={user} handelSearch={handelSearch} />}
+          />
           <Route
             path="/preferencess"
             element={<Preferencess handelid={handelid} />}
@@ -78,6 +88,7 @@ function App() {
           />
           <Route path="/dashboard" element={<Dashboard user={user} />} />
           <Route path="/details" element={<Details buttonId={id} />} />
+          <Route path="/search" element={<Search data={searchData} />} />
         </Routes>
       </BrowserRouter>
     </div>
