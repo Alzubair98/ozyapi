@@ -5,23 +5,21 @@ import { GiBathtub } from "react-icons/gi";
 import { NavLink } from "react-router-dom";
 import "./preferencess.css";
 
-const Card = (props) => {
+const SearchCard = (props) => {
   return (
     <div key={props.id} className="card mb-3">
       <div className="row g-0">
         <div className="col-md-5">
           <Carousel fade className="c-c-img">
-            {props.images.map((image) =>
-              image.map((single, i) => (
-                <Carousel.Item>
-                  <img
-                    className="d-block w-100 p-c-img"
-                    src={single}
-                    alt="First slide"
-                  />
-                </Carousel.Item>
-              ))
-            )}
+            {props.images.map((image) => (
+              <Carousel.Item>
+                <img
+                  className="d-block w-100 p-c-img"
+                  src={image}
+                  alt="First slide"
+                />
+              </Carousel.Item>
+            ))}
           </Carousel>
         </div>
         <div className="col-md-7">
@@ -58,4 +56,4 @@ const Card = (props) => {
   );
 };
 
-export default Card;
+export default SearchCard;
