@@ -6,7 +6,7 @@ const Search = (props) => {
   const state = props.data;
   return (
     <div className="D-card">
-      <div className="p-secondPart col-8">
+      <div className="p-secondPart">
         {state.map((item) => (
           <SearchCard
             id={item.id}
@@ -16,6 +16,8 @@ const Search = (props) => {
             location={item.location}
             rooms={item.rooms}
             baths={item.bath_rooms}
+            size={item.size}
+            refrence={item.ref_number}
           />
         ))}
       </div>
