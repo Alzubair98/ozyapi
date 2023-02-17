@@ -8,7 +8,7 @@ import Services from "../services/services";
 const Main = (props) => {
   return (
     <>
-      <Intro handelSearch={props.handelSearch} />
+      <Intro onSearch={props.onSearch} />
       <Services />
       <Article />
       <Blog />

@@ -61,10 +61,10 @@ function App() {
     setId(Number(button.id));
   };
 
-  const [searchData, setSearchData] = useState("data");
+  const [searchResults, setSearchResults] = useState([]);
 
-  const handelSearch = (data) => {
-    setSearchData(data);
+  const handleSearch = (data) => {
+    setSearchResults(data);
   };
 
   return (
@@ -74,7 +74,7 @@ function App() {
         <Routes>
           <Route
             path="/"
-            element={<Main user={user} handelSearch={handelSearch} />}
+            element={<Main user={user} onSearch={handleSearch} />}
           />
           <Route
             path="/preferencess"
@@ -88,7 +88,7 @@ function App() {
           />
           <Route path="/dashboard" element={<Dashboard user={user} />} />
           <Route path="/details" element={<Details buttonId={id} />} />
-          <Route path="/search" element={<Search data={searchData} />} />
+          <Route path="/search" element={<Search data={searchResults} />} />
         </Routes>
       </BrowserRouter>
     </div>

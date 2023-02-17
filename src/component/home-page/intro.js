@@ -1,29 +1,36 @@
 import React, { useState } from "react";
 import Turky from "../../images/turky.jpg";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./intro.css";
-import { NavLink } from "react-router-dom";
 
 const Intro = (props) => {
+  const navigate = useNavigate();
   const [priceRange, setPriceRange] = useState("");
   const [location, setLocation] = useState("");
   const [rooms, setRooms] = useState("");
   const [houseType, setHouseType] = useState("");
   const [refNumber, setRefNumber] = useState("");
 
+  const [data, setData] = useState("");
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await axios.get("http://localhost:3001/search", {
-      params: {
-        location: location,
-        rooms: rooms,
-        house_type: houseType,
-        price: priceRange,
-        ref_number: refNumber,
-      },
-    });
-    props.handelSearch(response.data);
+    const response = await axios
+      .get("http://localhost:3001/search", {
+        params: {
+          location: location,
+          rooms: rooms,
+          house_type: houseType,
+          price: priceRange,
+          ref_number: refNumber,
+        },
+      })
+      .then((response) => {
+        props.onSearch(response.data);
+        navigate("/search");
+      })
+      .catch((error) => console.log("search", error));
   };
 
   return (
@@ -104,9 +111,7 @@ const Intro = (props) => {
               </div>
               <div className="col-auto">
                 <button type="submit" className="btn btn-primary">
-                  <NavLink to="/search" className="i-color">
-                    Search
-                  </NavLink>
+                  Search
                 </button>
               </div>
             </div>

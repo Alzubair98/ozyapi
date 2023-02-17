@@ -13,7 +13,6 @@ const Preferencess = (props) => {
   const state = useSelector((state) => state.storeSlice);
   return (
     <>
-      {console.log(state)}
       <div className="p-fullPage row">
         <div className="p-firstPart col-4">
           <h1>why</h1>
