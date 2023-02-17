@@ -2,15 +2,13 @@ import React from "react";
 import Carousel from "react-bootstrap/Carousel";
 import { MdBedroomChild } from "react-icons/md";
 import { GiBathtub } from "react-icons/gi";
-import { NavLink } from "react-router-dom";
-import "./preferencess.css";
 
 const SearchCard = (props) => {
   return (
-    <div key={props.id} className="card mb-3">
+    <div key={props.id} className="card mb-3 shadow-lg rounded">
       <div className="row g-0">
         <div className="col-md-5">
-          <Carousel fade className="c-c-img">
+          <Carousel fade className="c-c-img rounded">
             {props.images.map((image) => (
               <Carousel.Item>
                 <img
@@ -40,16 +38,6 @@ const SearchCard = (props) => {
             <GiBathtub className="c-room-image" />
             <p>{props.baths}</p>
           </div>
-
-          <button
-            className="btn btn-success"
-            type="button"
-            onClick={props.handelid}
-          >
-            <NavLink className="details-link" id={props.id} to="/details">
-              Details
-            </NavLink>
-          </button>
         </div>
       </div>
     </div>
