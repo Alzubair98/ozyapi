@@ -16,6 +16,7 @@ const Search = (props) => {
           rooms={item.rooms}
           baths={item.bath_rooms}
           size={item.size}
+          price={item.price}
           refrence={item.ref_number}
         />
       ))}

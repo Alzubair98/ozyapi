@@ -4,6 +4,7 @@ import { MdBedroomChild } from "react-icons/md";
 import { GiBathtub } from "react-icons/gi";
 import { BsHouseFill, BsFillKeyFill } from "react-icons/bs";
 import { ImLocation } from "react-icons/im";
+import { FaMoneyBillAlt } from "react-icons/fa";
 import "./intro.css";
 
 const SearchCard = (props) => {
@@ -31,6 +32,10 @@ const SearchCard = (props) => {
                 <p className="card-text">
                   <ImLocation className="card-icons" />
                   {props.location}
+                </p>
+                <p className="card-text">
+                  <FaMoneyBillAlt className="card-icons" />
+                  Price :${props.price}
                 </p>
                 <p className="card-text">
                   <BsFillKeyFill className="card-icons" />
