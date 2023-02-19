@@ -8,6 +8,7 @@ import React, { useState, useEffect } from "react";
 import Navbar from "./component/navbar/navbar";
 import Details from "./component/preferences/details";
 import Search from "./component/home-page/search";
+import WhatsApp from "./component/contact/whatsApp";
 
 function App() {
   const [user, setUser] = useState({
@@ -90,6 +91,7 @@ function App() {
           <Route path="/details" element={<Details buttonId={id} />} />
           <Route path="/search" element={<Search data={searchResults} />} />
         </Routes>
+        <WhatsApp />
       </BrowserRouter>
     </div>
   );
