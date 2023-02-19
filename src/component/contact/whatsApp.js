@@ -1,32 +1,36 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import "./whatapp.css";
 
-const WhatsApp = () => {
-  const handleClick = () => {
-    const message = encodeURIComponent("Hello, how can i assist you?");
-    window.open(`https://wa.me/+905359431896?text=${message}`, "_blank");
-  };
+function WhatsApp() {
+  const [showButton, setShowButton] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setShowButton(true);
+      } else {
+        setShowButton(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <div className="whatapp-icon" onClick={handleClick}>
-      {" "}
-      <FaWhatsapp
-        style={{
-          position: "fixed",
-          bottom: "20px",
-          left: "20px",
-          color: "#25d366",
-          width: "60px",
-          height: "60px",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          cursor: "pointer",
-        }}
-      />{" "}
-    </div>
+    <a
+      href="https://wa.me/1234567890"
+      className={`whatsapp-button ${showButton ? "show" : ""}`}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <FaWhatsapp className="whatsapp-icon" />
+    </a>
   );
-};
+}
 
 export default WhatsApp;
