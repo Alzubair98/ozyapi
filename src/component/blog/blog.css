@@ -1,3 +1,5 @@
+
+
 .b-text-cont{
     display: flex;
     padding: 5rem 10rem;
@@ -19,3 +21,10 @@
     height: 10rem;
 }
 
+@media (max-width: 768px){
+    .b-blogs-cont{
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+}
