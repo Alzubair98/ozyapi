@@ -9,59 +9,48 @@ import "./intro.css";
 
 const SearchCard = (props) => {
   return (
-    <div className="card mb-3 rounded shadow-lg" key={props.id}>
-      <div className="row g-0">
-        <Carousel fade className="c-c-img">
+    <div className="card rounded shadow-lg">
+      <div className="Carousel">
+        <Carousel fade className="C-C-Carousel">
           {props.images.map((image) => (
-            <Carousel.Item>
+            <Carousel.Item className="C-C-item">
               <img
-                className="d-block w-100 p-c-img"
+                className="C-C-image d-block"
                 src={image}
                 alt="First slide"
               />
             </Carousel.Item>
           ))}
         </Carousel>
-
-        <div className="col-md-6">
-          <div className="card-body">
-            <h5 className="card-title">{props.type}</h5>
-            <p className="card-text">{props.desc}</p>
-            <div className="card-cont-cont">
-              <div className="card-cont">
-                <p className="card-text">
-                  <ImLocation className="card-icons" />
-                  {props.location}
-                </p>
-                <p className="card-text">
-                  <FaMoneyBillAlt className="card-icons" />
-                  Price :${props.price}
-                </p>
-                <p className="card-text">
-                  <BsFillKeyFill className="card-icons" />
-                  Ref Number :{props.refrence}
-                </p>
-              </div>
-
-              <div className="card-cont">
-                <p className="card-text">
-                  <MdBedroomChild className="card-icons" />
-                  {props.rooms} Rooms
-                </p>
-                <p className="card-text">
-                  <GiBathtub className="card-icons" /> {props.baths} Bathrooms
-                </p>
-                <p className="card-text">
-                  <BsHouseFill className="card-icons" /> house size
-                  {props.size}m
-                </p>
-              </div>
-            </div>
-            <div className="button-cont">
-              <button className="btn btn-primary">Contact</button>
-              <button className="btn btn-success">Add to wish list</button>
-            </div>
-          </div>
+      </div>
+      <div className="body">
+        <h2> {props.type}</h2>
+        <h3>{props.desc}</h3>
+        <div className="d-c-cont">
+          <p>
+            <ImLocation className="d-c-icon" /> {props.location}
+          </p>
+          <p>
+            <MdBedroomChild className="d-c-icon" /> {props.rooms}
+          </p>
+          <p>
+            <GiBathtub className="d-c-icon" /> {props.baths}
+          </p>
+        </div>
+        <div className="d-c-cont">
+          <p>
+            <FaMoneyBillAlt className="d-c-icon" /> {props.price}$
+          </p>
+          <p>
+            <BsHouseFill className="d-c-icon" /> {props.size}
+          </p>
+          <p>
+            <BsFillKeyFill className="d-c-icon" /> {props.refrence}
+          </p>
+        </div>
+        <div className="button-cont">
+          <button className="btn btn-primary">Contact</button>
+          <button className="btn btn-success">Add to Wishlist</button>
         </div>
       </div>
     </div>
