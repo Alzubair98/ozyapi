@@ -1,8 +1,6 @@
 import React from "react";
 import "./footer.css";
-import { BsFacebook } from "react-icons/bs";
-import { AiOutlineInstagram } from "react-icons/ai";
-import { FiLinkedin } from "react-icons/fi";
+import { FiLinkedin, FiFacebook, FiYoutube, FiInstagram } from "react-icons/fi";
 
 const Footer = () => {
   return (
@@ -33,11 +31,11 @@ const Footer = () => {
                 </div>
                 <div className="social-list">
                   <a href="#" className="icon icon-facebook">
-                    <BsFacebook />
+                    <FiFacebook />
                   </a>
 
                   <a href="#" className="icon icon-instagram">
-                    <AiOutlineInstagram className="i" />
+                    <FiInstagram className="i" />
                   </a>
 
                   <a href="#" className="icon icon-twitter">
@@ -45,7 +43,7 @@ const Footer = () => {
                   </a>
 
                   <a href="#" className="icon icon-youtube">
-                    <BsFacebook />
+                    <FiYoutube />
                   </a>
                 </div>
               </div>

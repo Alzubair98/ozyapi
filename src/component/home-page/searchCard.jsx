@@ -51,7 +51,6 @@ const SearchCard = (props) => {
           </p>
         </div>
         <div className="button-cont">
-          <button className="btn btn-primary">Contact</button>
           <button className="btn btn-success">Add to Wishlist</button>
         </div>
       </div>

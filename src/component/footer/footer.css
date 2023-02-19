@@ -30,6 +30,7 @@
     display: flex;
     gap: 25px;
     margin-left: 10px;
+    padding-bottom: 1rem;
 }
 
 .icon{
@@ -45,6 +46,7 @@
     outline: 2px solid #fff;
     transition-property: outline-offset, outline-color, background-color;
     transition-duration: .25s;
+    
 }
 
 .icon:hover{
@@ -68,6 +70,17 @@
 .icon-twitter:hover {
     background-color: #1da1f2;
     outline-color: #1da1f2;
+    
+}
+
+.icon-facebook:hover{
+    background-color: #0999f3;
+    outline-color: #0999f3;
+}
+
+.icon-youtube:hover{
+    background-color: #f32c09;
+    outline-color: #f32c09;
 }
 
 @keyframes shake {
