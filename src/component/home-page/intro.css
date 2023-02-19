@@ -44,7 +44,7 @@
     gap: 1rem;
 }
 
-.card{
+.s-card{
     display: flex;
     flex-direction: row;
     width: 60rem;

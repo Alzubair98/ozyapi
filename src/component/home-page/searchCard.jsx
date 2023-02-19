@@ -9,7 +9,7 @@ import "./intro.css";
 
 const SearchCard = (props) => {
   return (
-    <div className="card rounded shadow-lg">
+    <div className="card s-card rounded shadow-lg">
       <div className="Carousel">
         <Carousel fade className="C-C-Carousel">
           {props.images.map((image) => (
