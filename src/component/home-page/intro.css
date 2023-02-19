@@ -59,6 +59,8 @@
     display: flex;
     width: 55%;
     flex-direction: column;
+    justify-content: space-around;
+    position: relative;
 }
 
 .d-c-cont{
@@ -74,7 +76,7 @@
 .button-cont{
     display: flex;
     justify-content: flex-end;
-    margin-top: 10rem;
+    
     gap: 1rem;
     padding-right: 1rem;
 }

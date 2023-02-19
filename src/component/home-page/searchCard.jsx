@@ -24,8 +24,10 @@ const SearchCard = (props) => {
         </Carousel>
       </div>
       <div className="body">
-        <h2> {props.type}</h2>
-        <h3>{props.desc}</h3>
+        <div>
+          <h2> {props.type}</h2>
+          <h3>{props.desc}</h3>
+        </div>
         <div className="d-c-cont">
           <p>
             <ImLocation className="d-c-icon" /> {props.location}
