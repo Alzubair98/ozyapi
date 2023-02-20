@@ -55,7 +55,7 @@ const SearchCard = (props) => {
             <button
               className="btn btn-success"
               id={props.id}
-              onClick={props.SaveToSession}
+              onClick={() => props.SaveToSession(props.item)}
             >
               Add to Wishlist
             </button>

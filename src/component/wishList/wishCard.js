@@ -25,7 +25,7 @@ const WishCard = (props) => {
         </div>
         <div className="body">
           <div>
-            <h2> {props.type}</h2>
+            <h2>{props.type}</h2>
             <h3>{props.desc}</h3>
           </div>
           <div className="d-c-cont">
