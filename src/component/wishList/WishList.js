@@ -1,18 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import WishCard from "./wishCard";
 
 const WishList = () => {
-  let data = JSON.parse(sessionStorage.getItem("user_like"));
+  const [existingRecords, setExistingRecords] = useState(
+    JSON.parse(sessionStorage.getItem("user_like"))
+  );
 
   const removeFromWish = (index) => {
-    const updateRecords = [...data];
+    const updateRecords = [...existingRecords];
     updateRecords.splice(index, 1);
     sessionStorage.setItem("user_like", JSON.stringify(updateRecords));
+    setExistingRecords(updateRecords);
   };
 
   return (
     <div className="D-card">
-      {data.map((single) =>
+      {existingRecords.map((single) =>
         single.map((item, index) => (
           <div className="card" key={single.id}>
             <WishCard
