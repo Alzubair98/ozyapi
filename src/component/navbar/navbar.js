@@ -37,6 +37,11 @@ const Navbar = (props) => {
                     Properties
                   </a>
                 </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/wishlist">
+                    Wish List
+                  </a>
+                </li>
                 {props.user.user.email === "zubairsk53@gmail.com" && (
                   <li className="nav-item">
                     <a className="nav-link" href="/Dashboard">

@@ -12,7 +12,6 @@ const Intro = (props) => {
   const [houseType, setHouseType] = useState("");
   const [refNumber, setRefNumber] = useState("");
 
-  const [data, setData] = useState("");
   const handleSubmit = async (e) => {
     e.preventDefault();
 

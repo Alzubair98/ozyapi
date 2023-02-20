@@ -9,6 +9,7 @@ import Navbar from "./component/navbar/navbar";
 import Details from "./component/preferences/details";
 import Search from "./component/home-page/search";
 import WhatsApp from "./component/contact/whatsApp";
+import WishList from "./component/wishList/WishList";
 
 function App() {
   const [user, setUser] = useState({
@@ -90,6 +91,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard user={user} />} />
           <Route path="/details" element={<Details buttonId={id} />} />
           <Route path="/search" element={<Search data={searchResults} />} />
+          <Route path="/wishlist" element={<WishList />} />
         </Routes>
         <WhatsApp />
       </BrowserRouter>
