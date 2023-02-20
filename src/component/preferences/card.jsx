@@ -56,7 +56,7 @@ const Card = (props) => {
           </div>
           <div className="button-cont">
             <button className="btn btn-success">Add to Wishlist</button>
-            <button
+            {/* <button
               className="btn btn-success"
               type="button"
               onClick={props.handelid}
@@ -64,7 +64,7 @@ const Card = (props) => {
               <NavLink className="details-link" id={props.id} to="/details">
                 Details
               </NavLink>
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
