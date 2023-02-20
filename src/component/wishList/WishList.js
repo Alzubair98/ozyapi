@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import WishCard from "./wishCard";
+import SearchCard from "../home-page/searchCard";
 
 const WishList = () => {
   const [existingRecords, setExistingRecords] = useState(
@@ -23,7 +23,8 @@ const WishList = () => {
       ) : (
         existingRecords.map((item, index) => (
           <div className="card" key={item.id}>
-            <WishCard
+            <SearchCard
+              mode="remove"
               index={index}
               id={item.id}
               type={item.house_type}

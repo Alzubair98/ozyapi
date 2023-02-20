@@ -17,6 +17,7 @@ const Search = (props) => {
     <div className="D-card">
       {state.map((item) => (
         <SearchCard
+          mode="add"
           item={item}
           id={item.id}
           type={item.house_type}

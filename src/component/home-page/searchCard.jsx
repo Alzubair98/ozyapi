@@ -8,6 +8,13 @@ import { FaMoneyBillAlt } from "react-icons/fa";
 import "./intro.css";
 
 const SearchCard = (props) => {
+  const handleButtonClick = () => {
+    if ((props.mode = "add")) {
+      props.SaveToSession(props.item);
+    } else {
+      props.removeFromWish(props.index);
+    }
+  };
   return (
     <div key={props.id}>
       <div className="card s-card rounded shadow-lg">
@@ -55,9 +62,11 @@ const SearchCard = (props) => {
             <button
               className="btn btn-success"
               id={props.id}
-              onClick={() => props.SaveToSession(props.item)}
+              onClick={handleButtonClick}
             >
-              Add to Wishlist
+              {props.mode === "add"
+                ? "Add to Wishlist"
+                : "Remove from Wishlist"}
             </button>
           </div>
         </div>
