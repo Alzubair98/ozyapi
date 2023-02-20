@@ -13,24 +13,21 @@ const Preferencess = (props) => {
   const state = useSelector((state) => state.storeSlice);
   return (
     <>
-      <div className="p-fullPage row">
-        <div className="p-firstPart col-4">
-          <h1>why</h1>
-        </div>
-        <div className="p-secondPart col-8">
-          {state.map((item) => (
-            <Card
-              id={item.id}
-              type={item.house_type}
-              images={item.images_urls}
-              desc={item.description}
-              location={item.location}
-              rooms={item.rooms}
-              baths={item.bath_rooms}
-              handelid={props.handelid}
-            />
-          ))}
-        </div>
+      <div className="D-card">
+        {state.map((item) => (
+          <Card
+            id={item.id}
+            type={item.house_type}
+            images={item.images_urls}
+            desc={item.description}
+            location={item.location}
+            rooms={item.rooms}
+            baths={item.bath_rooms}
+            size={item.size}
+            price={item.price}
+            refrence={item.ref_number}
+          />
+        ))}
       </div>
     </>
   );
