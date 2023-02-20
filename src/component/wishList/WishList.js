@@ -24,7 +24,7 @@ const WishList = () => {
         existingRecords.map((item, index) => (
           <div className="card" key={item.id}>
             <SearchCard
-              mode="remove"
+              mode={false}
               index={index}
               id={item.id}
               type={item.house_type}
