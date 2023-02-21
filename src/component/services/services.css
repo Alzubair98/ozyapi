@@ -140,6 +140,20 @@
 
 @media (max-width: 768px){
     .services{
-        padding: 0 0 0 0;
+        padding: 0;
     }
+
+    .s-text{
+        padding-top: 1rem;
+        text-align: center;
+    }
+
+    .s-text hr{
+        margin: 0;
+        width: 0;
+    }
+
+    
+
+    
 }
