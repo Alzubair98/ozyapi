@@ -138,3 +138,8 @@
     width: 98%;
 }
 
+@media (max-width: 768px){
+    .services{
+        padding: 0 0 0 0;
+    }
+}
