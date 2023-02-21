@@ -41,7 +41,7 @@ const Intro = (props) => {
             PROPERTIES IN TURKEY BUT ONLY THE GOOD ONES
           </h1>
           <form onSubmit={handleSubmit}>
-            <div className="row g-3 ms-6 ps-3 pe-3">
+            <div className="row g-3 ms-6 ps-3 pe-3 button-align">
               <div className="col-md-2">
                 <select
                   className="form-control"

@@ -94,7 +94,11 @@
         text-align: center;
     }
 
-    
+    .button-align{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
 
 
