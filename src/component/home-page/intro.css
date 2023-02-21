@@ -11,7 +11,6 @@
 .i-cont{
     display: flex;
     flex-direction: column;
-    justify-self: center;
     align-items: center;
 }
 
@@ -89,6 +88,17 @@
 }
 
 @media (max-width: 768px){
+    /*first page intro and form */
+    
+    .i-text{
+        text-align: center;
+    }
+
+    
+
+
+
+    /* card */
     .card{
         flex-direction: column !important;
         width: auto;
