@@ -55,7 +55,12 @@ const Card = (props) => {
             </p>
           </div>
           <div className="button-cont">
-            <button className="btn btn-success">Add to Wishlist</button>
+            <button
+              className="btn btn-success"
+              onClick={() => props.SaveToSession(props.item)}
+            >
+              Add to Wishlist
+            </button>
             {/* <button
               className="btn btn-success"
               type="button"
