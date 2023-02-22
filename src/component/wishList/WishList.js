@@ -5,12 +5,6 @@ const WishList = () => {
   const [existingRecords, setExistingRecords] = useState(
     JSON.parse(sessionStorage.getItem("user_like")) || []
   );
-  const removeFromWish = (index) => {
-    const updateRecords = [...existingRecords];
-    updateRecords.splice(index, 1);
-    sessionStorage.setItem("user_like", JSON.stringify(updateRecords));
-    setExistingRecords(updateRecords);
-  };
 
   return (
     <div className="D-card">
@@ -36,7 +30,6 @@ const WishList = () => {
               size={item.size}
               price={item.price}
               refrence={item.ref_number}
-              removeFromWish={removeFromWish}
             />
           </div>
         ))

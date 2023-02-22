@@ -15,6 +15,13 @@ const SearchCard = (props) => {
     sessionRecords.push(item);
     sessionStorage.setItem("user_like", JSON.stringify(sessionRecords));
   };
+
+  const removeFromWish = (index) => {
+    const updateRecords = JSON.parse(sessionStorage.getItem("user_like"));
+    updateRecords.splice(index, 1);
+    sessionStorage.setItem("user_like", JSON.stringify(updateRecords));
+  };
+
   return (
     <div key={props.id}>
       <div className="card s-card rounded shadow-lg">
@@ -71,7 +78,7 @@ const SearchCard = (props) => {
               <button
                 className="btn btn-danger"
                 id={props.id}
-                onClick={() => props.removeFromWish(props.index)}
+                onClick={() => removeFromWish(props.index)}
               >
                 Remove from Wishlist
               </button>
