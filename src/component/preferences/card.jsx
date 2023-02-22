@@ -9,6 +9,13 @@ import { NavLink } from "react-router-dom";
 import "./preferencess.css";
 
 const Card = (props) => {
+  const SaveToSession = (item) => {
+    const sessionRecords =
+      JSON.parse(sessionStorage.getItem("user_like")) || [];
+
+    sessionRecords.push(item);
+    sessionStorage.setItem("user_like", JSON.stringify(sessionRecords));
+  };
   return (
     <div key={props.id}>
       <div className="card s-card rounded shadow-lg">
@@ -57,7 +64,7 @@ const Card = (props) => {
           <div className="button-cont">
             <button
               className="btn btn-success"
-              onClick={() => props.SaveToSession(props.item)}
+              onClick={() => SaveToSession(props.item)}
             >
               Add to Wishlist
             </button>

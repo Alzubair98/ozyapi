@@ -5,17 +5,7 @@ import { useSelector } from "react-redux";
 import { loadHouses } from "../../Redux/Houses/houses";
 import { useDispatch } from "react-redux";
 
-const Preferencess = (props) => {
-  const SaveToSession = (item) => {
-    // const house = state.filter((item) => item.id === Number(event.target.id));
-
-    const sessionRecords =
-      JSON.parse(sessionStorage.getItem("user_like")) || [];
-
-    sessionRecords.push(item);
-    sessionStorage.setItem("user_like", JSON.stringify(sessionRecords));
-  };
-
+const Preferencess = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(loadHouses());
@@ -37,7 +27,6 @@ const Preferencess = (props) => {
             size={item.size}
             price={item.price}
             refrence={item.ref_number}
-            SaveToSession={SaveToSession}
           />
         ))}
       </div>
