@@ -9,8 +9,6 @@ import "./intro.css";
 
 const SearchCard = (props) => {
   const SaveToSession = (item) => {
-    // const house = state.filter((item) => item.id === Number(event.target.id));
-
     const sessionRecords =
       JSON.parse(sessionStorage.getItem("user_like")) || [];
 
