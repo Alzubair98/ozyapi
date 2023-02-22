@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import { MdBedroomChild } from "react-icons/md";
 import { GiBathtub } from "react-icons/gi";
@@ -8,18 +8,22 @@ import { FaMoneyBillAlt } from "react-icons/fa";
 import "./intro.css";
 
 const SearchCard = (props) => {
+  const [disable, setDisable] = useState(false);
+
   const SaveToSession = (item) => {
     const sessionRecords =
       JSON.parse(sessionStorage.getItem("user_like")) || [];
 
     sessionRecords.push(item);
     sessionStorage.setItem("user_like", JSON.stringify(sessionRecords));
+    setDisable(true);
   };
 
   const removeFromWish = (index) => {
     const updateRecords = JSON.parse(sessionStorage.getItem("user_like"));
     updateRecords.splice(index, 1);
     sessionStorage.setItem("user_like", JSON.stringify(updateRecords));
+    setDisable(false);
   };
 
   return (
@@ -68,11 +72,12 @@ const SearchCard = (props) => {
           <div className="button-cont">
             {props.mode ? (
               <button
+                disabled={disable}
                 className="btn btn-success"
                 id={props.id}
                 onClick={() => SaveToSession(props.item)}
               >
-                Add to Wishlist
+                {disable ? "Added to Wishlist" : "add to wishlist"}
               </button>
             ) : (
               <button
