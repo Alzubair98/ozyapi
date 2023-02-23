@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import { MdBedroomChild } from "react-icons/md";
 import { GiBathtub } from "react-icons/gi";
@@ -9,12 +9,15 @@ import { NavLink } from "react-router-dom";
 import "./preferencess.css";
 
 const Card = (props) => {
+  const [disable, setDisable] = useState(false);
+
   const SaveToSession = (item) => {
     const sessionRecords =
       JSON.parse(sessionStorage.getItem("user_like")) || [];
 
     sessionRecords.push(item);
     sessionStorage.setItem("user_like", JSON.stringify(sessionRecords));
+    setDisable(true);
   };
   return (
     <div key={props.id}>
@@ -63,10 +66,11 @@ const Card = (props) => {
           </div>
           <div className="button-cont">
             <button
+              disabled={disable}
               className="btn btn-success"
               onClick={() => SaveToSession(props.item)}
             >
-              Add to Wishlist
+              {disable ? "Added to Wishlist" : "add to wishlist"}
             </button>
             {/* <button
               className="btn btn-success"
