@@ -19,10 +19,13 @@ const SearchCard = (props) => {
     setDisable(true);
   };
 
-  const removeFromWish = (index) => {
+  const removeFromWish = (index, item) => {
+    // need to clean this function
     const updateRecords = JSON.parse(sessionStorage.getItem("user_like"));
     updateRecords.splice(index, 1);
     sessionStorage.setItem("user_like", JSON.stringify(updateRecords));
+
+    props.removeItem(item);
     setDisable(false);
   };
 
@@ -83,7 +86,7 @@ const SearchCard = (props) => {
               <button
                 className="btn btn-danger"
                 id={props.id}
-                onClick={() => removeFromWish(props.index)}
+                onClick={() => removeFromWish(props.index, props.item)}
               >
                 Remove from Wishlist
               </button>

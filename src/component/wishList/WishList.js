@@ -6,6 +6,14 @@ const WishList = () => {
     JSON.parse(sessionStorage.getItem("user_like")) || []
   );
 
+  const removeItem = (item) => {
+    const updateRecords = existingRecords.filter(
+      (record) => record.id !== item.id
+    );
+
+    setExistingRecords(updateRecords);
+  };
+
   return (
     <div className="D-card">
       {existingRecords.length === 0 ? (
@@ -18,6 +26,7 @@ const WishList = () => {
         existingRecords.map((item, index) => (
           <div className="card" key={item.id}>
             <SearchCard
+              item={item}
               mode={false}
               index={index}
               id={item.id}
@@ -30,6 +39,7 @@ const WishList = () => {
               size={item.size}
               price={item.price}
               refrence={item.ref_number}
+              removeItem={removeItem}
             />
           </div>
         ))
