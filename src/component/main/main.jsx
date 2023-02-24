@@ -4,6 +4,7 @@ import Article from "../articles/article";
 import Blog from "../blog/blog";
 import Footer from "../footer/footer";
 import Services from "../services/services";
+import ContactForm from "../contact/ContactForm";
 
 const Main = (props) => {
   return (
@@ -12,6 +13,7 @@ const Main = (props) => {
       <Services />
       <Article />
       <Blog />
+      <ContactForm />
       <Footer />
     </>
   );
