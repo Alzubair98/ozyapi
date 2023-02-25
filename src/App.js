@@ -10,6 +10,7 @@ import Details from "./component/preferences/details";
 import Search from "./component/home-page/search";
 import WhatsApp from "./component/contact/whatsApp";
 import WishList from "./component/wishList/WishList";
+import ContactPage from "./component/contact/ContactPage";
 
 function App() {
   const [user, setUser] = useState({
@@ -92,6 +93,7 @@ function App() {
           <Route path="/details" element={<Details buttonId={id} />} />
           <Route path="/search" element={<Search data={searchResults} />} />
           <Route path="/wishlist" element={<WishList />} />
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
         <WhatsApp />
       </BrowserRouter>
