@@ -17,3 +17,9 @@
     padding: 1rem;
 }
 
+@media (max-width: 768px){
+    .c-p-card{
+        width: 90%;
+        
+    }
+}
