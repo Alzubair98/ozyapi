@@ -5,6 +5,7 @@ import { GiBathtub } from "react-icons/gi";
 import { BsHouseFill, BsFillKeyFill } from "react-icons/bs";
 import { ImLocation } from "react-icons/im";
 import { FaMoneyBillAlt } from "react-icons/fa";
+import axios from "axios";
 import "./intro.css";
 
 const SearchCard = (props) => {
@@ -27,6 +28,10 @@ const SearchCard = (props) => {
 
     props.removeItem(item);
     setDisable(false);
+  };
+
+  const removeItem = (event) => {
+    console.log(event.target.id);
   };
 
   return (
@@ -92,7 +97,13 @@ const SearchCard = (props) => {
               </button>
             )}
             {props.user.admin && (
-              <button className="btn btn-danger">Delete</button>
+              <button
+                onClick={removeItem}
+                className="btn btn-danger"
+                id={props.item.id}
+              >
+                Delete
+              </button>
             )}
           </div>
         </div>
