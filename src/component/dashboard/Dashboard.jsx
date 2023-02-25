@@ -1,5 +1,6 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 import axios from "axios";
+import "./Dashboard.css";
 
 import "./Dashboard.css";
 
@@ -44,89 +45,107 @@ function Dashboard(props) {
       });
   };
 
-  const getItems = () => {
-    axios
-      .get("http://127.0.0.1:3001/houses")
-      .then((response) => console.log(response.data));
-  };
-
   return (
-    <div>
-      <form onSubmit={(e) => handleChange(e)}>
-        <label htmlFor="house type">house type</label>
+    <div className="dashbord-cont">
+      <form className="form-cont " onSubmit={(e) => handleChange(e)}>
+        <div className="col-auto">
+          <label className="form-label" htmlFor="house type">
+            HOUSE TYPE
+          </label>
+        </div>
+
         <input
+          className="form-control"
           type="text"
           name="house_type"
           placeholder="house type"
           required
         />
-        <br />
-        <label htmlFor="house type">real price</label>
+
+        <label className="form-label" htmlFor="house type">
+          REAL PRICE
+        </label>
+
         <input
-          className="mt-2"
+          className="mt-2 form-control"
           type="number"
           name="real_price"
           placeholder="real price"
           required
         />
+
         <br />
-        <label htmlFor="house type">price</label>
+        <label className="form-label" htmlFor="house type">
+          PRICE
+        </label>
         <input
-          className="mt-2"
+          className="mt-2 form-control"
           type="number"
           name="price"
-          placeholder="house type"
+          placeholder="price"
           required
         />
         <br />
-        <label htmlFor="house type">location</label>
+        <label className="form-label" htmlFor="house type">
+          LOCATION
+        </label>
         <input
-          className="mt-2"
+          className="mt-2 form-control"
           type="text"
           name="location"
           placeholder="location"
           required
         />
         <br />
-        <label htmlFor="house type">owner number</label>
+        <label className="form-label" htmlFor="house type">
+          OWNER NUMBER
+        </label>
         <input
-          className="mt-2"
+          className="mt-2 form-control"
           type="text"
           name="owner_number"
           placeholder="owner number"
           required
         />
         <br />
-        <label htmlFor="house type">age</label>
+        <label className="form-label" htmlFor="house type">
+          AGE
+        </label>
         <input
-          className="mt-2"
+          className="mt-2 form-control"
           type="text"
           name="age"
           placeholder="age"
           required
         />
         <br />
-        <label htmlFor="house type">size</label>
+        <label className="form-label" htmlFor="house type">
+          SIZE
+        </label>
         <input
-          className="mt-2"
+          className="mt-2 form-control"
           type="text"
           name="size"
           placeholder="size"
           required
         />
         <br />
-        <label htmlFor="house type">rooms</label>
+        <label className="form-label" htmlFor="house type">
+          ROOMS
+        </label>
         <input
-          className="mt-2"
+          className="mt-2 form-control"
           type="text"
           name="rooms"
           placeholder="rooms"
           required
         />
         <br />
-        <label htmlFor="house type">bath rooms</label>
+        <label className="form-label" htmlFor="house type">
+          BATH ROOMS
+        </label>
         <input
-          className="mt-2"
+          className="mt-2 form-control"
           type="text"
           name="bath_rooms"
           placeholder="bath rooms"
@@ -134,9 +153,11 @@ function Dashboard(props) {
         />
         <br />
 
-        <label htmlFor="house type">ref number</label>
+        <label className="form-label" htmlFor="house type">
+          REF NUMBER
+        </label>
         <input
-          className="mt-2"
+          className="mt-2 form-control"
           type="number"
           name="ref_number"
           placeholder="ref number"
@@ -144,15 +165,21 @@ function Dashboard(props) {
         />
 
         <br />
-        <label htmlFor="house type">images</label>
-        <input className="mt-2" type="file" multiple name="images" required />
+        <label className="form-label" htmlFor="house type">
+          images
+        </label>
+        <input
+          className="mt-2 form-control"
+          type="file"
+          multiple
+          name="images"
+          required
+        />
         <br />
-        <button type="submit">save house</button>
-        <br />
-        <button type="button" onClick={getItems}>
-          {" "}
-          show
+        <button type="submit" className="btn btn-primary mt-2 mb-2">
+          save house
         </button>
+        <br />
       </form>
     </div>
   );
