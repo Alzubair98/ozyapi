@@ -4,11 +4,13 @@ import "./intro.css";
 
 const Search = (props) => {
   const state = props.data;
+  const user = props.user.user;
 
   return (
     <div className="D-card">
       {state.map((item) => (
         <SearchCard
+          user={user}
           mode={true}
           item={item}
           id={item.id}

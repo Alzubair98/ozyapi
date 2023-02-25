@@ -91,6 +91,9 @@ const SearchCard = (props) => {
                 Remove from Wishlist
               </button>
             )}
+            {props.user.adming && (
+              <button className="btn btn-danger">Delete</button>
+            )}
           </div>
         </div>
       </div>

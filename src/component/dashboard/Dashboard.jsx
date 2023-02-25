@@ -2,8 +2,6 @@ import React from "react";
 import axios from "axios";
 import "./Dashboard.css";
 
-import "./Dashboard.css";
-
 function Dashboard(props) {
   const handleChange = (event) => {
     event.preventDefault();
