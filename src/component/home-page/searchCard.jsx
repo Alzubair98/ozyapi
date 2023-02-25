@@ -91,7 +91,6 @@ const SearchCard = (props) => {
                 Remove from Wishlist
               </button>
             )}
-
             {props.user.admin && (
               <button className="btn btn-danger">Delete</button>
             )}

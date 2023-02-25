@@ -42,7 +42,7 @@ const Navbar = (props) => {
                     Wish List
                   </a>
                 </li>
-                {props.user.user.email === "zubairsk53@gmail.com" && (
+                {props.user.user.admin && (
                   <li className="nav-item">
                     <a className="nav-link" href="/Dashboard">
                       dashboard
