@@ -2,3 +2,18 @@
     padding: 0 10rem;
 }
 
+/* //////////// contact page ////////// */
+
+.c-p-form{
+    padding-top: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.c-p-card{
+    width: 50%;
+    text-align: center;
+    padding: 1rem;
+}
+
