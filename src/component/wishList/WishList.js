@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import SearchCard from "../home-page/searchCard";
 
-const WishList = () => {
+const WishList = (props) => {
+  const user = props.user.user;
+
   const [existingRecords, setExistingRecords] = useState(
     JSON.parse(sessionStorage.getItem("user_like")) || []
   );
@@ -26,6 +28,7 @@ const WishList = () => {
         existingRecords.map((item, index) => (
           <div className="card" key={item.id}>
             <SearchCard
+              user={user}
               item={item}
               mode={false}
               index={index}
