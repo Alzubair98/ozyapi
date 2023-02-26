@@ -10,6 +10,7 @@ const Search = (props) => {
     <div className="D-card">
       {state.map((item) => (
         <SearchCard
+          deleteFromAPI={props.deleteFromAPI}
           user={user}
           mode={true}
           item={item}

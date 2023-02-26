@@ -70,6 +70,11 @@ function App() {
     setSearchResults(data);
   };
 
+  const deleteFromAPI = (id) => {
+    console.log(searchResults);
+    console.log(id);
+  };
+
   return (
     <div className="App">
       <BrowserRouter>
@@ -93,7 +98,13 @@ function App() {
           <Route path="/details" element={<Details buttonId={id} />} />
           <Route
             path="/search"
-            element={<Search data={searchResults} user={user} />}
+            element={
+              <Search
+                data={searchResults}
+                user={user}
+                deleteFromAPI={deleteFromAPI}
+              />
+            }
           />
           <Route path="/wishlist" element={<WishList />} />
           <Route path="/contact" element={<ContactPage />} />

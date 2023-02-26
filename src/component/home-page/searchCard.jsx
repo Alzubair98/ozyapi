@@ -30,10 +30,6 @@ const SearchCard = (props) => {
     setDisable(false);
   };
 
-  const removeItem = (event) => {
-    console.log(event.target.id);
-  };
-
   return (
     <div key={props.id}>
       <div className="card s-card rounded shadow-lg">
@@ -98,9 +94,8 @@ const SearchCard = (props) => {
             )}
             {props.user.admin && (
               <button
-                onClick={removeItem}
+                onClick={() => props.deleteFromAPI(props.id)}
                 className="btn btn-danger"
-                id={props.item.id}
               >
                 Delete
               </button>
