@@ -70,9 +70,14 @@ function App() {
     setSearchResults(data);
   };
 
-  const deleteFromAPI = (id) => {
-    console.log(searchResults);
-    console.log(id);
+  const deleteFromAPI = (id, item) => {
+    const updateRecords = searchResults.filter(
+      (record) => record.id !== item.id
+    );
+    setSearchResults(updateRecords);
+
+    console.log("item", item);
+    console.log("the id", id);
   };
 
   return (
