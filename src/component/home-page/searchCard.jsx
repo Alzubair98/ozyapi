@@ -5,7 +5,6 @@ import { GiBathtub } from "react-icons/gi";
 import { BsHouseFill, BsFillKeyFill } from "react-icons/bs";
 import { ImLocation } from "react-icons/im";
 import { FaMoneyBillAlt } from "react-icons/fa";
-import axios from "axios";
 import "./intro.css";
 
 const SearchCard = (props) => {

@@ -11,6 +11,7 @@ import Search from "./component/home-page/search";
 import WhatsApp from "./component/contact/whatsApp";
 import WishList from "./component/wishList/WishList";
 import ContactPage from "./component/contact/ContactPage";
+import axios from "axios";
 
 function App() {
   const [user, setUser] = useState({
@@ -75,6 +76,17 @@ function App() {
       (record) => record.id !== item.id
     );
     setSearchResults(updateRecords);
+
+    axios
+      .post("http://localhost:3001/destroy", {
+        house: { id: id },
+      })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log("delete reservation error", error);
+      });
 
     console.log("item", item);
     console.log("the id", id);
