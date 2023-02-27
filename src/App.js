@@ -112,7 +112,7 @@ function App() {
             }
           />
           <Route path="/dashboard" element={<Dashboard user={user} />} />
-          <Route path="/details" element={<Details buttonId={id} />} />
+          {/* <Route path="/details" element={<Details buttonId={id} />} /> */}
           <Route
             path="/search"
             element={

@@ -34,8 +34,8 @@ const SearchCard = (props) => {
       <div className="card s-card rounded shadow-lg">
         <div className="Carousel">
           <Carousel fade className="C-C-Carousel">
-            {props.images.map((image) => (
-              <Carousel.Item className="C-C-item">
+            {props.images.map((image, index) => (
+              <Carousel.Item className="C-C-item" key={index}>
                 <img
                   className="C-C-image d-block"
                   src={image}

@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import SearchCard from "../home-page/searchCard";
 
-const WishList = (props) => {
-  const user = props.user.user;
-
+const WishList = () => {
   const [existingRecords, setExistingRecords] = useState(
     JSON.parse(sessionStorage.getItem("user_like")) || []
   );

@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import Card from "./card";
 import "./preferencess.css";
 import { useSelector } from "react-redux";
 import { loadHouses } from "../../Redux/Houses/houses";
