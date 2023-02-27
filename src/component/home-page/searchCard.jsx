@@ -91,7 +91,7 @@ const SearchCard = (props) => {
                 Remove from Wishlist
               </button>
             )}
-            {props.user.admin && (
+            {props.user && props.user.admin && (
               <button
                 onClick={() => props.deleteFromAPI(props.id, props.item)}
                 className="btn btn-danger"

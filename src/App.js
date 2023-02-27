@@ -123,7 +123,7 @@ function App() {
               />
             }
           />
-          <Route path="/wishlist" element={<WishList user={user} />} />
+          <Route path="/wishlist" element={<WishList />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
         <WhatsApp />

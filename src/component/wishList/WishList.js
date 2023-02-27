@@ -28,7 +28,6 @@ const WishList = (props) => {
         existingRecords.map((item, index) => (
           <div className="card" key={item.id}>
             <SearchCard
-              user={user}
               item={item}
               mode={false}
               index={index}

@@ -5,7 +5,6 @@ import { GiBathtub } from "react-icons/gi";
 import { BsHouseFill, BsFillKeyFill } from "react-icons/bs";
 import { ImLocation } from "react-icons/im";
 import { FaMoneyBillAlt } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
 import "./preferencess.css";
 
 const Card = (props) => {

@@ -4,6 +4,7 @@ import "./preferencess.css";
 import { useSelector } from "react-redux";
 import { loadHouses } from "../../Redux/Houses/houses";
 import { useDispatch } from "react-redux";
+import SearchCard from "../home-page/searchCard";
 
 const Preferencess = () => {
   const dispatch = useDispatch();
@@ -15,7 +16,7 @@ const Preferencess = () => {
     <>
       <div className="D-card">
         {state.map((item) => (
-          <Card
+          <SearchCard
             item={item}
             id={item.id}
             type={item.house_type}
