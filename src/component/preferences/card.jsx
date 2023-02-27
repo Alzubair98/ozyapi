@@ -24,17 +24,15 @@ const Card = (props) => {
       <div className="card s-card rounded shadow-lg">
         <div className="Carousel">
           <Carousel fade className="C-C-Carousel">
-            {props.images.map((image) =>
-              image.map((single) => (
-                <Carousel.Item className="C-C-item">
-                  <img
-                    className="C-C-image d-block"
-                    src={single}
-                    alt="First slide"
-                  />
-                </Carousel.Item>
-              ))
-            )}
+            {props.images.map((image) => (
+              <Carousel.Item className="C-C-item">
+                <img
+                  className="C-C-image d-block"
+                  src={image}
+                  alt="First slide"
+                />
+              </Carousel.Item>
+            ))}
           </Carousel>
         </div>
         <div className="body">
