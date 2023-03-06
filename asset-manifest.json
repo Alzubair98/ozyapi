@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ozyapi/static/css/main.5b779bc5.css",
+    "main.js": "/ozyapi/static/js/main.ed103378.js",
+    "static/media/turky.jpg": "/ozyapi/static/media/turky.ac38cd624332fcf88da0.jpg",
+    "static/media/shapes.jpg": "/ozyapi/static/media/shapes.91b1856f4e4d5b8f81aa.jpg",
+    "index.html": "/ozyapi/index.html",
+    "main.5b779bc5.css.map": "/ozyapi/static/css/main.5b779bc5.css.map",
+    "main.ed103378.js.map": "/ozyapi/static/js/main.ed103378.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5b779bc5.css",
+    "static/js/main.ed103378.js"
+  ]
+}
