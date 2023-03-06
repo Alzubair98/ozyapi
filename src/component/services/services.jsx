@@ -28,7 +28,7 @@ const Services = () => {
           {carouseldata.map((item) => {
             return (
               <div key={item.key} className="c-content">
-                <img src={item.image} alt="image" className="c-image" />
+                <img src={item.image} alt="image-1" className="c-image" />
                 <p>{item.description}</p>
               </div>
             );
