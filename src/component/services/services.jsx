@@ -1,7 +1,7 @@
 import React from "react";
 import "./services.css";
 import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import the CSS
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import carouseldata from "./FCarsouelData";
 import ReactPlayer from "react-player";
