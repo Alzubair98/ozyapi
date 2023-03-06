@@ -1,5 +1,5 @@
 {
-  "homepage": "https://Alzubair98.github.io/ozyapi",
+  "homepage": "https://Alzubair98.github.io/ozyapi/",
   "name": "ozyapi",
   "version": "0.1.0",
   "private": true,
@@ -32,7 +32,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
