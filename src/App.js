@@ -26,7 +26,6 @@ function App() {
         loggedInStatus: "LOGGED_IN",
         user: data.user,
       });
-      console.log("session storage", data);
     } else if (!data && user.loggedInStatus === "LOGGED_IN") {
       setUser({
         loggedInStatus: "NOT_LOGGED_IN",
@@ -84,11 +83,8 @@ function App() {
         console.log(response);
       })
       .catch((error) => {
-        console.log("delete reservation error", error);
+        console.log("delete item error", error);
       });
-
-    console.log("item", item);
-    console.log("the id", id);
   };
 
   return (

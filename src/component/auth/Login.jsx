@@ -36,7 +36,6 @@ const Login = (props) => {
         if (response.data.logged_in) {
           props.handleSuccessfulAuth(response.data);
           navigate("/");
-          console.log("logged in", response);
         }
       })
       .catch((error) => {

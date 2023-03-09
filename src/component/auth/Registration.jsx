@@ -40,7 +40,6 @@ const Rigstration = (props) => {
         if (response.data.status === "created") {
           props.handleSuccessfulAuth(response.data);
           navigate("/");
-          console.log(response);
         }
       })
       .catch((error) => {
