@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import "./Dashboard.css";
 
-function Dashboard(props) {
+function Dashboard() {
   const handleChange = (event) => {
     event.preventDefault();
     const data = new FormData();
@@ -22,10 +22,11 @@ function Dashboard(props) {
     for (let i = 0; i < files; i++) {
       data.append("house[images][]", event.target.images.files[i]);
     }
-    handleSubmit(data);
+
+    handleSubmit(data, event);
   };
 
-  const handleSubmit = (data) => {
+  const handleSubmit = (data, event) => {
     axios
       .post(
         "http://127.0.0.1:3001/houses",
@@ -36,6 +37,7 @@ function Dashboard(props) {
       .then((response) => {
         if (response) {
           console.log("house status", response);
+          event.target.reset();
         }
       })
       .catch((error) => {
