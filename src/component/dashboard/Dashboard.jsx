@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import "./Dashboard.css";
 
 function Dashboard() {
+  const [Submitting, setSubmitting] = useState(false);
   const handleChange = (event) => {
     event.preventDefault();
     const data = new FormData();
@@ -29,7 +30,7 @@ function Dashboard() {
   const handleSubmit = (data, event) => {
     axios
       .post(
-        "http://127.0.0.1:3001/houses",
+        "http://127.0.0.1:3001/housessss",
         data,
         { withCredentials: true },
         { headers: { "Content-type": "multipart/form-data" } }
@@ -42,6 +43,7 @@ function Dashboard() {
       })
       .catch((error) => {
         console.log("house error", error);
+        setSubmitting(true);
       });
   };
 
@@ -176,10 +178,21 @@ function Dashboard() {
           required
         />
         <br />
-        <button type="submit" className="btn btn-primary mt-2 mb-2">
+        <button
+          type="submit"
+          className="btn btn-primary mt-2 mb-2 form-control"
+        >
           save house
         </button>
-        <br />
+        <div className="d-error-msg">
+          {Submitting && (
+            <div className="alert alert-danger" role="alert">
+              <h4 className="alert-heading">YOU HAVEE DONE SOMETHING WRONG!</h4>
+              <p>PLEASE TRY AGAIN AND BE SURE WHAT TO WRITE</p>
+              <hr />
+            </div>
+          )}
+        </div>
       </form>
     </div>
   );
