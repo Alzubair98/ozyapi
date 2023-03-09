@@ -30,7 +30,7 @@ function Dashboard() {
   const handleSubmit = (data, event) => {
     axios
       .post(
-        "http://127.0.0.1:3001/housessss",
+        "http://127.0.0.1:3001/houses",
         data,
         { withCredentials: true },
         { headers: { "Content-type": "multipart/form-data" } }
