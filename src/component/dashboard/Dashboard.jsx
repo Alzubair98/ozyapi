@@ -187,7 +187,7 @@ function Dashboard() {
         <div className="d-error-msg">
           {Submitting && (
             <div className="alert alert-danger" role="alert">
-              <h4 className="alert-heading">YOU HAVEE DONE SOMETHING WRONG!</h4>
+              <h4 className="alert-heading">YOU HAVE DONE SOMETHING WRONG!</h4>
               <p>PLEASE TRY AGAIN AND BE SURE WHAT TO WRITE</p>
               <hr />
             </div>
