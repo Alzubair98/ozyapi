@@ -37,12 +37,10 @@ function Dashboard() {
       )
       .then((response) => {
         if (response) {
-          console.log("house status", response);
           event.target.reset();
         }
       })
       .catch((error) => {
-        console.log("house error", error);
         setSubmitting(true);
       });
   };
