@@ -7,7 +7,6 @@ const Navbar = (props) => {
 
   const handleLanguageChange = (language) => {
     i18n.changeLanguage(language);
-    console.log("translate button", language);
   };
   return (
     <>
