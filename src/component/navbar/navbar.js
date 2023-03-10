@@ -1,7 +1,13 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import "./navbar.css";
 
 const Navbar = (props) => {
+  const { t, i18n } = useTranslation();
+
+  const handleLanguageChange = (language) => {
+    i18n.changeLanguage(language);
+  };
   return (
     <>
       <div className="">
@@ -29,12 +35,12 @@ const Navbar = (props) => {
                     aria-current="page"
                     href="/"
                   >
-                    Home
+                    {t("Home")}
                   </a>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link" href="/preferencess">
-                    Properties
+                    {t("Properties")}
                   </a>
                 </li>
                 <li className="nav-item">
@@ -63,6 +69,39 @@ const Navbar = (props) => {
                   <a className="nav-link" href="/Contact">
                     Contact
                   </a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Dropdown
+                  </a>
+                  <ul
+                    className="dropdown-menu"
+                    aria-labelledby="navbarDropdown"
+                  >
+                    <li>
+                      <button
+                        className="dropdown-item"
+                        onClick={() => handleLanguageChange("en")}
+                      >
+                        English
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        className="dropdown-item"
+                        onClick={() => handleLanguageChange("ar")}
+                      >
+                        Arabic
+                      </button>
+                    </li>
+                  </ul>
                 </li>
                 {Object.keys(props.user.user).length != 0 ? (
                   <button

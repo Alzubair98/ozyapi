@@ -27,6 +27,7 @@ const Preferencess = () => {
             size={item.size}
             price={item.price}
             refrence={item.ref_number}
+            mode={true}
           />
         ))}
       </div>
