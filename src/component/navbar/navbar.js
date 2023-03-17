@@ -79,7 +79,7 @@ const Navbar = (props) => {
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    Dropdown
+                    languages
                   </a>
                   <ul
                     className="dropdown-menu"
