@@ -87,10 +87,7 @@ const Footer = () => {
                 <div className="collapsed-content">
                   <ul>
                     <li>
-                      <a href="cart.html">MY FAVORITES</a>
-                    </li>
-                    <li>
-                      <a href="account-wishlist.html">REFRENCES</a>
+                      <a href="/wishlist">WISHLIST</a>
                     </li>
                     <li>
                       <a href="account-history.html">BLOG</a>
