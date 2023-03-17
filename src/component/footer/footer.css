@@ -92,3 +92,8 @@
 .footer-top{
     padding-top: 10px;
 }
+
+.no_decor{
+    text-decoration: none;
+    color: white;
+}

@@ -11,7 +11,7 @@ const Footer = () => {
             <div className="col-lg col-xl last-mobile myfooter1">
               <div className="footer-block">
                 <div className="footer-logo">
-                  <a href="/" className="newlogo">
+                  <a href="/" className="no_decor">
                     OZYAPI
                   </a>
                 </div>
