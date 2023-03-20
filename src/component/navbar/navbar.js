@@ -45,29 +45,29 @@ const Navbar = (props) => {
                 </li>
                 <li className="nav-item">
                   <a className="nav-link" href="/wishlist">
-                    Wish List
+                    {t("Wish")}
                   </a>
                 </li>
                 {props.user.user.admin && (
                   <li className="nav-item">
                     <a className="nav-link" href="/Dashboard">
-                      dashboard
+                      {t("dashboard")}
                     </a>
                   </li>
                 )}
                 <li className="nav-item">
                   <a className="nav-link" href="#">
-                    Blog
+                    {t("blog")}
                   </a>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link" href="#">
-                    About
+                    {t("about")}
                   </a>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link" href="/Contact">
-                    Contact
+                    {t("contact")}
                   </a>
                 </li>
                 <li class="nav-item dropdown">
@@ -79,7 +79,7 @@ const Navbar = (props) => {
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    languages
+                    {t("languages")}
                   </a>
                   <ul
                     className="dropdown-menu"
