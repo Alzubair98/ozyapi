@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import SearchCard from "../home-page/searchCard";
+import "./wishlist.css";
 
 const WishList = () => {
   const [existingRecords, setExistingRecords] = useState(
@@ -15,7 +16,7 @@ const WishList = () => {
   };
 
   return (
-    <div className="D-card">
+    <div className="D-card error-card">
       {existingRecords.length === 0 ? (
         <div className="alert alert-danger" role="alert">
           <h4 className="alert-heading">NO ITEMS!</h4>
