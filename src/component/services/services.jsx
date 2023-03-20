@@ -2,18 +2,20 @@ import React from "react";
 import "./services.css";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { useTranslation } from "react-i18next";
 
 import carouseldata from "./FCarsouelData";
 import ReactPlayer from "react-player";
 
 const Services = () => {
+  const { t } = useTranslation();
   const renderThumbs = () => null;
   return (
     <div className="services">
       <div className="s-firstcursul">
         <div className="s-text">
           <hr className="s-firsthr" />
-          <span>HOT PROPERTIES FOR SALE IN TURKEY</span>
+          <span>{t("hot")}</span>
           <hr className="s-secondhr" />
         </div>
 
@@ -39,7 +41,7 @@ const Services = () => {
       <div className="s-secondcarousel">
         <div className="s-text">
           <hr className="s-firsthr" />
-          <span>WATCH WHAT OUR CLIENTS SAY ABOUT US</span>
+          <span>{t("cliets")}</span>
           <hr className="s-secondhr" />
         </div>
 
@@ -62,14 +64,13 @@ const Services = () => {
       <div className="s-thirdcarousel">
         <div className="s-text">
           <hr className="s-firsthr" />
-          <span>LATEST VIDEOS FROM OUR YOUTUBE CHANNE</span>
+          <span>{t("videos")}</span>
           <hr className="s-secondhr" />
         </div>
         <Carousel showThumbs={false}>
           <div className="s-th-video">
             <ReactPlayer url="" />
           </div>
-
           <div className="s-th-video">
             <ReactPlayer url="" />
           </div>
