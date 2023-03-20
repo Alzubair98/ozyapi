@@ -2,14 +2,16 @@ import React from "react";
 import "./blog.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import { useTranslation } from "react-i18next";
 
 const Blog = () => {
+  const { t } = useTranslation();
   return (
     <>
       <div className="b-cont mb-5">
         <div className="b-text-cont">
           <hr className="s-firsthr" />
-          <h4>Latest Posts from our Blog</h4>
+          <h4>{t("blog")}</h4>
           <hr className="s-secondhr" />
         </div>
         <div className="b-blogs-cont">

@@ -31,6 +31,7 @@ i18n.init({
         hot: "HOT PROPERTIES FOR SALE IN TURKEY",
         cliets: "WATCH WHAT OUR CIENTS SA ABOUT US",
         videos: "LATEST VIDEOS FROM OUR YOUTUBE CHANLE",
+        blog: "latest Posts from our Blog",
       },
     },
     ar: {
@@ -53,6 +54,7 @@ i18n.init({
         hot: "افضل العروض المتوفرة",
         cliets: "اراء عملائنا",
         videos: "اخر فيديوهات قناتنا علئ اليوتيوب",
+        blog: "اخر منشورات مدوناتنا",
       },
     },
   },
@@ -67,7 +69,3 @@ root.render(
     </Provider>
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
