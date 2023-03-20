@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import Turky from "../../images/turky.jpg";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import axios from "axios";
 import "./intro.css";
 
 const Intro = (props) => {
+  const { t } = useTranslation();
+
   const navigate = useNavigate();
   const [priceRange, setPriceRange] = useState("");
   const [location, setLocation] = useState("");
@@ -37,9 +40,7 @@ const Intro = (props) => {
       <div className="intro">
         <div className="i-cont">
           <img src={Turky} className="i-bg" />
-          <h1 className="i-text">
-            PROPERTIES IN TURKEY BUT ONLY THE GOOD ONES
-          </h1>
+          <h1 className="i-text">{t("properties")}</h1>
           <form onSubmit={handleSubmit}>
             <div className="row g-3 ms-6 ps-3 pe-3 button-align">
               <div className="col-md-2">
@@ -49,7 +50,7 @@ const Intro = (props) => {
                   name="location"
                   onChange={(e) => setLocation(e.target.value)}
                 >
-                  <option>Location</option>
+                  <option>{t("location")}</option>
                   <option value="istanbull">Istanbul</option>
                   <option value="adana">adana</option>
                   <option value="ankara">ankara</option>
@@ -62,7 +63,7 @@ const Intro = (props) => {
                   name="house-type"
                   onChange={(e) => setHouseType(e.target.value)}
                 >
-                  <option value="">house Type</option>
+                  <option>{t("type")}</option>
                   <option value="new house 3">new house 3</option>
                   <option value="normal house">normal house</option>
                   <option value="big house">big house</option>
@@ -75,7 +76,7 @@ const Intro = (props) => {
                   name="rooms"
                   onChange={(e) => setRooms(e.target.value)}
                 >
-                  <option value="">Rooms</option>
+                  <option>{t("rooms")}</option>
                   <option value="2">1+1 room</option>
                   <option value="3">2+1 room</option>
                   <option value="4">3+1 room</option>
@@ -89,7 +90,7 @@ const Intro = (props) => {
                   name="location"
                   onChange={(e) => setPriceRange(e.target.value)}
                 >
-                  <option value="">Price Range</option>
+                  <option>{t("price")}</option>
                   <option value="1000-2000">1000-2000</option>
                   <option value="2000-3000">2000-3000</option>
                   <option value="3000-4000">3000-4000</option>
@@ -103,14 +104,14 @@ const Intro = (props) => {
                   name="ref_number"
                   type="text"
                   className="form-control"
-                  placeholder="or Ref number"
+                  placeholder={t("ref")}
                   aria-label="Last name"
                   onChange={(e) => setRefNumber(e.target.value)}
                 />
               </div>
               <div className="col-auto">
                 <button type="submit" className="btn btn-primary">
-                  Search
+                  {t("search")}
                 </button>
               </div>
             </div>
