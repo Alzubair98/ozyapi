@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import SearchCard from "../home-page/searchCard";
+import { useTranslation } from "react-i18next";
 import "./wishlist.css";
 
 const WishList = () => {
+  const { t } = useTranslation();
   const [existingRecords, setExistingRecords] = useState(
     JSON.parse(sessionStorage.getItem("user_like")) || []
   );
@@ -19,8 +21,11 @@ const WishList = () => {
     <div className="D-card error-card">
       {existingRecords.length === 0 ? (
         <div className="alert alert-danger" role="alert">
-          <h4 className="alert-heading">NO ITEMS!</h4>
-          <p>YOU DONT HAVE ANY THING IN YOUR WISH LIST</p>
+          <h4 className="alert-heading">{t("items")}</h4>
+          <p>{t("noItems")}</p>
+          <a href="/preferencess" className="btn btn-primary">
+            {t("btnWishList")}
+          </a>
           <hr />
         </div>
       ) : (
