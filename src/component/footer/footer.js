@@ -1,8 +1,9 @@
 import React from "react";
 import "./footer.css";
 import { FiLinkedin, FiFacebook, FiYoutube, FiInstagram } from "react-icons/fi";
-
+import { useTranslation } from "react-i18next";
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer className="page-footer footer-style-6 text-light  bg-dark">
       <div className="footer-top">
@@ -18,11 +19,11 @@ const Footer = () => {
                 <div className="collapsed-content">
                   <ul>
                     <li>
-                      E-mail:{" "}
+                      {t("email")}:{" "}
                       <a href="mailto:Foxshop@gmail.com">OZYAPI@gmail.com</a>
                     </li>
                     <li>
-                      PHONE:{" "}
+                      {t("phone")}:{" "}
                       <a href="https://api.whatsapp.com/send?phone=+00000000000">
                         +000000000000
                       </a>
@@ -48,16 +49,11 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            {/* <div className="col-lg col-xl footer-hiden">
-              <div className="footer-block collapsed-mobile"></div>
-            </div> */}
-            {/* <div className="col-lg col-xl footer-hiden">
-              <div className="footer-block collapsed-mobile"></div>
-            </div> */}
+
             <div className="col-lg col-xl">
               <div className="footer-block collapsed-mobile">
                 <div className="title">
-                  <h4>Information</h4>
+                  <h4>{t("information")}</h4>
                   <span className="toggle-arrow">
                     <span></span>
                     <span></span>
@@ -66,10 +62,10 @@ const Footer = () => {
                 <div className="collapsed-content">
                   <ul>
                     <li>
-                      <a href="about.html">About Us</a>
+                      <a href="about.html">{t("about")}</a>
                     </li>
                     <li>
-                      <a href="contact.html">Contact Us</a>
+                      <a href="contact.html">{t("contact")}</a>
                     </li>
                   </ul>
                 </div>
@@ -79,18 +75,14 @@ const Footer = () => {
               <div className="footer-block collapsed-mobile">
                 <div className="title">
                   <h4>WEBSITE NAVIGATION</h4>
-                  <span className="toggle-arrow">
-                    <span></span>
-                    <span></span>
-                  </span>
                 </div>
                 <div className="collapsed-content">
                   <ul>
                     <li>
-                      <a href="/wishlist">WISHLIST</a>
+                      <a href="/wishlist">{t("Wish")}</a>
                     </li>
                     <li>
-                      <a href="account-history.html">BLOG</a>
+                      <a href="account-history.html">{t("blog")}</a>
                     </li>
                   </ul>
                 </div>

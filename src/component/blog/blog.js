@@ -11,7 +11,7 @@ const Blog = () => {
       <div className="b-cont mb-5">
         <div className="b-text-cont">
           <hr className="s-firsthr" />
-          <h4>{t("blog")}</h4>
+          <h4>{t("blogs")}</h4>
           <hr className="s-secondhr" />
         </div>
         <div className="b-blogs-cont">
