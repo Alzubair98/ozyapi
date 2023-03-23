@@ -22,6 +22,9 @@
 }
 
 @media (max-width: 768px){
+    .form-cont{
+        padding: 0;
+    }
     .c-p-card{
         width: 90%;
         
