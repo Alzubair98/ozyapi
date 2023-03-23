@@ -50,9 +50,7 @@
     height: 25rem;
 }
 
-.Carousel{
-    width: 45%;
-}
+
 
 .body{
     display: flex;
@@ -82,6 +80,10 @@
 
 /* Carousel */
 
+.Carousel{
+    width: 40%;
+}
+
 .C-C-image{
  width: 100%;
  height: 24.9rem;
@@ -100,21 +102,22 @@
         justify-content: center;
     }
 
-
-
     /* card */
+     .D-card{
+        padding: 5rem 1rem;
+    } 
     .card{
         flex-direction: column !important;
         width: auto;
         height: auto;
         padding: 1rem 1rem;
-    }
+    } 
 
     .Carousel{
-        width: auto;
+        width: 21rem;
     }
-
-    .body{
-        width: auto;
+    
+    .C-C-image{
+        width: 100%;
     }
 }
