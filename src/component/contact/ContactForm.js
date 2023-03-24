@@ -11,7 +11,7 @@ const ContactForm = () => {
         method="post"
         className="contact-form m-2 p-5 n-box2"
       >
-        <h3 className="font-bold">{t("contact")}</h3>
+        <h3 className="font-bold">{t("contactus")}</h3>
         <hr />
         <input
           name="user-name"
@@ -32,12 +32,12 @@ const ContactForm = () => {
           type="text"
           className="form-control mb-2"
           rows={3}
-          defaultValue={t("message")}
+          placeholder={t("message")}
           required
         />
 
         <button type="submit" className="btn btn-primary">
-          Submit
+          {t("submit")}
         </button>
       </form>
     </div>
