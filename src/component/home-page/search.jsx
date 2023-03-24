@@ -30,7 +30,7 @@ const Search = (props) => {
       })
       .then((response) => {
         console.log("api call", response.data);
-        // props.onSearch(response.data);
+        props.onSearch(response.data);
       })
       .catch((error) => console.log("search", error));
   };

@@ -109,6 +109,7 @@ function App() {
             path="/search"
             element={
               <Search
+                onSearch={handleSearch}
                 data={searchResults}
                 user={user}
                 deleteFromAPI={deleteFromAPI}
