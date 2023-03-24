@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import SearchCard from "./searchCard";
-import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import axios from "axios";
 import "./intro.css";
 
 const Search = (props) => {
@@ -10,20 +10,29 @@ const Search = (props) => {
 
   const { t } = useTranslation();
 
-  const navigate = useNavigate();
   const [priceRange, setPriceRange] = useState("");
   const [location, setLocation] = useState("");
   const [rooms, setRooms] = useState("");
   const [houseType, setHouseType] = useState("");
   const [refNumber, setRefNumber] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("test");
-    console.log("price", priceRange);
-    console.log("location", location);
-    console.log("rooms", rooms);
-    console.log("houseType", houseType);
+    const response = await axios
+      .get("http://localhost:3001/search", {
+        params: {
+          location: location,
+          rooms: rooms,
+          house_type: houseType,
+          price: priceRange,
+          ref_number: refNumber,
+        },
+      })
+      .then((response) => {
+        console.log("api call", response.data);
+        // props.onSearch(response.data);
+      })
+      .catch((error) => console.log("search", error));
   };
 
   return (
