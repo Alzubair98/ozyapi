@@ -108,11 +108,11 @@ const Navbar = (props) => {
                     className="btn btn-danger"
                     onClick={() => props.handleLogout()}
                   >
-                    logout
+                    {t("logout")}
                   </button>
                 ) : (
                   <a href="/home">
-                    <button className="btn btn-success">Sign In</button>
+                    <button className="btn btn-success">{t("singIn")}</button>
                   </a>
                 )}
               </ul>
