@@ -10,6 +10,12 @@
     padding: 5rem 1rem;
 }
 
+.search-bar{
+    position: fixed;
+    background-color: wheat;
+    padding: 1rem;
+    border-radius: 20%;
+}
 
 /* .n-navbar{
     opacity: 1 !important;
@@ -44,10 +50,12 @@
 
 .D-card{
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 1rem;
+    margin-left: 20rem;
 }
 
 .s-card{
