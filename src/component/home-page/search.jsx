@@ -39,7 +39,7 @@ const Search = (props) => {
     <div className="full-card">
       <div className="search-bar">
         <form onSubmit={handleSubmit}>
-          <div className="g-3 ms-6 ps-3 pe-3 button-align">
+          <div className="g-3 ms-6 ps-3 pe-3">
             <div className="">
               <select
                 className="form-control"
