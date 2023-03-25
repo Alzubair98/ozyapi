@@ -103,7 +103,9 @@ function App() {
               <Home handleLogin={handleLogin} user={user.loggedInStatus} />
             }
           />
-          <Route path="/dashboard" element={<Dashboard user={user} />} />
+          {user.user.admin && (
+            <Route path="/dashboard" element={<Dashboard user={user} />} />
+          )}
           {/* <Route path="/details" element={<Details buttonId={id} />} /> */}
           <Route
             path="/search"
