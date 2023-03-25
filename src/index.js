@@ -44,6 +44,9 @@ i18n.init({
         items: "NO ITEMS!",
         noItems: "YOU DONT HAVE ANY THING IN YOUR WISH LIST",
         btnWishList: "Go To Properties",
+        allProperties: "All Properties!",
+        PropertiesDesc:
+          "Here you can see all Properties to search for spesific Propertiy click the button below",
       },
     },
     ar: {
@@ -78,6 +81,9 @@ i18n.init({
         items: "!لاتوجد عناصر",
         noItems: "انت لا تملك اي عنصر في المفضلة",
         btnWishList: "اذهب الى العروض",
+        allProperties: "!كل العروض",
+        PropertiesDesc:
+          "هنا يمكنك ان تجد جميع العروض اذا كنت تريد عرض معين اضغط على الزر في الاسفل",
       },
     },
   },

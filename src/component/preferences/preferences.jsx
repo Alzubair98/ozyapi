@@ -3,9 +3,11 @@ import "./preferencess.css";
 import { useSelector } from "react-redux";
 import { loadHouses } from "../../Redux/Houses/houses";
 import { useDispatch } from "react-redux";
+import { useTranslation } from "react-i18next";
 import SearchCard from "../home-page/searchCard";
 
 const Preferencess = () => {
+  const { t } = useTranslation();
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(loadHouses());
@@ -15,14 +17,11 @@ const Preferencess = () => {
     <>
       <div className="all-card">
         <div className="alert alert-success alert1 ">
-          <h4 className="alert-heading">All Properties!</h4>
-          <p>
-            Here you can see all Properties to search for spesific Propertiy
-            click the button below
-          </p>
+          <h4 className="alert-heading">{t("allProperties")}</h4>
+          <p>{t("PropertiesDesc")}</p>
           <hr />
           <a href="/search" className="btn btn-primary">
-            search
+            {t("search")}
           </a>
         </div>
         <div className="D-card P-card">
