@@ -6,3 +6,13 @@
 .details-link:hover{
     color: white
 }
+
+.P-card{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 5rem;
+}

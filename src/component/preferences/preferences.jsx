@@ -13,7 +13,7 @@ const Preferencess = () => {
   const state = useSelector((state) => state.storeSlice);
   return (
     <>
-      <div className="D-card">
+      <div className="P-card">
         {state.map((item) => (
           <SearchCard
             item={item}
