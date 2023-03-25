@@ -116,7 +116,10 @@
     }
 
     /* card */
-    
+    .D-card{
+        margin-left: 0;
+        margin-top: 7rem;
+    }
     .card{
         flex-direction: column !important;
         width: auto;
@@ -130,5 +133,17 @@
     
     .C-C-image{
         width: 100%;
+    }
+
+    /* search-bar */
+    .full-card{
+        flex-direction: column;
+    }
+
+    .search-bar{
+        border-radius: 10%;
+        
+        
+        position: relative;
     }
 }
