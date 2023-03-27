@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useTranslation } from "react-i18next";
 import "./intro.css";
-const SearchBar = (props) => {
+const SearchBar = ({ onSearch }) => {
   const { t } = useTranslation();
 
   const [priceRange, setPriceRange] = useState("");
@@ -24,7 +24,7 @@ const SearchBar = (props) => {
         },
       })
       .then((response) => {
-        props.onSearch(response.data);
+        onSearch(response.data);
       })
       .catch((error) => console.log("search", error));
   };
