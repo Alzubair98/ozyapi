@@ -8,7 +8,7 @@ its the Front-end part of the website im building for the real estate company ca
 
 ## project Link
 
-(https://mellifluous-bienenstitch-8176b8.netlify.app/)[llink]
+[link](https://mellifluous-bienenstitch-8176b8.netlify.app/)
 
 ## Built With
 
